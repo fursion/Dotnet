@@ -1,0 +1,16 @@
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.exe
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.deps.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.runtimeconfig.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.runtimeconfig.dev.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\ref\AutoDutyInfo.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\AutoDutyInfo.pdb
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.csproj.AssemblyReference.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.AssemblyInfoInputs.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.AssemblyInfo.cs
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.csproj.CoreCompileInputs.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\ref\AutoDutyInfo.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.pdb
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.genruntimeconfig.cache
