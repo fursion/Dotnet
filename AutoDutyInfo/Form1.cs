@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoDutyInfo.Core;
 
 namespace AutoDutyInfo
 {
@@ -23,6 +24,8 @@ namespace AutoDutyInfo
             System.Console.WriteLine(button_copy.Size);
         }
         private void button_Create_Click(object sender,EventArgs e){
+            System.Console.WriteLine(System.Configuration.ConfigurationManager.AppSettings["DateBaseUrl"]);
+            ShiftInfo.test();
 
         }
 

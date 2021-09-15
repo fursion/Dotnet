@@ -1,9 +1,9 @@
 using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace AutoDutyInfo
 {
     static class Program
@@ -13,11 +13,12 @@ namespace AutoDutyInfo
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {          
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            
         }
     }
 }
