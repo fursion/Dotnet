@@ -31,9 +31,7 @@
         private void InitializeComponent()
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.button_Create = new System.Windows.Forms.Button();
             this.button_copy = new System.Windows.Forms.Button();
@@ -48,13 +46,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // box
-            // 
-            this.box.Location = new System.Drawing.Point(12, 253);
-            this.box.Name = "box";
-            this.box.Size = new System.Drawing.Size(125, 27);
-            this.box.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -65,13 +56,6 @@
             this.label1.Text = "生成结果";
             this.label1.BackColor=System.Drawing.Color.Transparent;
             this.label1.BorderStyle=System.Windows.Forms.BorderStyle.FixedSingle;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 311);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 4;
             // 
             // textBox_result
             // 
@@ -119,8 +103,6 @@
             this.ClientSize = new System.Drawing.Size(1068, 800);
             this.Controls.Add(this.button_Create);
             this.Controls.Add(this.button_copy);
-            this.Controls.Add(this.box);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
@@ -138,9 +120,7 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox box;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Button button_Create;
         private System.Windows.Forms.Button button_copy;

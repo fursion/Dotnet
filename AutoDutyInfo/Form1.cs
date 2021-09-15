@@ -19,14 +19,11 @@ namespace AutoDutyInfo
 
         private void button_copy_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "0000000";
-            box.Text="";
             System.Console.WriteLine(pictureBox1.Height);
             System.Console.WriteLine(button_copy.Size);
         }
         private void button_Create_Click(object sender,EventArgs e){
-            box.Text="111111";
-            textBox1.Text="";
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
