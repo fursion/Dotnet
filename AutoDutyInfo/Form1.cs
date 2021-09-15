@@ -12,33 +12,26 @@ namespace AutoDutyInfo
 {
     public partial class Form1 : Form
     {
-        public void CreateControl()
-        {
-
-        }
-        public Label label1 = new Label()
-        {
-            Text = "AutoCreateString",
-            Location = new Point(10, 10),
-            TabIndex = 10
-        };
-        public TextBox textBox = new TextBox()
-        {
-            Location = new Point(10,10+20)
-        };
         public Form1()
         {
-            Controls.Add(label1);
-            Controls.Add(textBox);
-            InitializeComponent();
-            FormLayout();
-            System.Console.WriteLine("test");
+            InitializeComponent();       
         }
-        public void FormLayout()
+
+        private void button_copy_Click(object sender, EventArgs e)
         {
-            this.Name = "Auto";
-            this.Size = new System.Drawing.Size(900, 500);
-            this.StartPosition = FormStartPosition.WindowsDefaultLocation;
+            textBox1.Text = "0000000";
+            box.Text="";
+            System.Console.WriteLine(pictureBox1.Height);
+            System.Console.WriteLine(button_copy.Size);
+        }
+        private void button_Create_Click(object sender,EventArgs e){
+            box.Text="111111";
+            textBox1.Text="";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

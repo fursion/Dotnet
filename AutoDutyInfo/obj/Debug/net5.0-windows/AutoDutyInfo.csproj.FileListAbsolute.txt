@@ -14,3 +14,6 @@ C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\ref\AutoDutyInfo.dll
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.pdb
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.genruntimeconfig.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.Form1.resources
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.csproj.GenerateResource.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.Properties.Resources.resources
