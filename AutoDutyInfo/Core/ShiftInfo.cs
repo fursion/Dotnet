@@ -24,13 +24,18 @@ namespace AutoDutyInfo.Core
             var str = File.ReadAllText("./Config/ShiftInfo.json");
             Dictionary<string, string> dic = new Dictionary<string, string>();
             var dic1 = JsonSerializer.Deserialize<Dictionary<string, string>>(str1);
-            foreach(string term in dic1.Keys){
-                if(null!=term){
-                    System.Console.WriteLine(  term+""+dic1[term] );
+            foreach (string term in dic1.Keys)
+            {
+                if (null != term)
+                {
+                    System.Console.WriteLine(term + "" + dic1[term]);
                 }
             }
-            var dic2=JsonSerializer.Deserialize<Dictionary<string,shiftinfo>>(str);
-            if(dic2.ContainsKey("Middle_shift")){
+            var str3 = JsonSerializer.Serialize(ins);
+            System.Console.WriteLine(str3);
+            var dic2 = JsonSerializer.Deserialize<Dictionary<string, shiftinfos>>(str);
+            if (dic2.ContainsKey("Middle_shift"))
+            {
                 System.Console.WriteLine(dic2["Middle_shift"].icon);
                 System.Console.WriteLine(dic2["Middle_shift"].Place);
                 System.Console.WriteLine(dic2["Middle_shift"].Timeslot);
@@ -39,10 +44,11 @@ namespace AutoDutyInfo.Core
 
         }
     }
-    public class shiftinfo
+    [Serializable]
+    public class shiftinfos
     {
-        public string icon;
-        public string Place;
-        public string Timeslot;
+        public string icon { get; set; }
+        public string Place { get; set; }
+        public string Timeslot { get; set; }
     }
 }
