@@ -31,8 +31,6 @@ namespace AutoDutyInfo.Core
                     System.Console.WriteLine(term + "" + dic1[term]);
                 }
             }
-            var str3 = JsonSerializer.Serialize(ins);
-            System.Console.WriteLine(str3);
             var dic2 = JsonSerializer.Deserialize<Dictionary<string, shiftinfos>>(str);
             if (dic2.ContainsKey("Middle_shift"))
             {
