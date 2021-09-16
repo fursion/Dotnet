@@ -20,11 +20,10 @@ namespace AutoDutyInfo
 
         private void button_copy_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine(pictureBox1.Height);
-            System.Console.WriteLine(button_copy.Size);
+            var str=textBox_result.Text;
+            Clipboard.SetDataObject(str);
         }
         private void button_Create_Click(object sender,EventArgs e){
-            System.Console.WriteLine(System.Configuration.ConfigurationManager.AppSettings["DateBaseUrl"]);
            textBox_result.Text= ShiftInfo.ReadJsonText();
 
         }

@@ -91,6 +91,7 @@
             this.pictureBox1.Image = global::AutoDutyInfo.Properties.Resources.Help_Desk;
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
             this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.SizeMode =System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.Size = new System.Drawing.Size(global::AutoDutyInfo.Properties.Resources.Help_Desk.Width, global::AutoDutyInfo.Properties.Resources.Help_Desk.Height);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -100,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 800);
+            this.ClientSize = new System.Drawing.Size(global::AutoDutyInfo.Properties.Resources.Help_Desk.Width, 800);
             this.Controls.Add(this.button_Create);
             this.Controls.Add(this.button_copy);
             this.Controls.Add(this.label1);
