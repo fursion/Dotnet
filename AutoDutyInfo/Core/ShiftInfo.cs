@@ -13,11 +13,11 @@ namespace AutoDutyInfo.Core
     }
     public static class ShiftInfo
     {
-        public static void test(){
+        public static string  ReadJsonText(){
             
             var jsonstr=File.ReadAllText(System.Configuration.ConfigurationManager.AppSettings["linklistURl"]);
-           // var str=JsonSerializer.Deserialize<>(jsonstr);
-            System.Console.WriteLine(jsonstr);
+           return jsonstr;
+        
         }
     }
-}
+}     

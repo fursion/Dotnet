@@ -25,7 +25,7 @@ namespace AutoDutyInfo
         }
         private void button_Create_Click(object sender,EventArgs e){
             System.Console.WriteLine(System.Configuration.ConfigurationManager.AppSettings["DateBaseUrl"]);
-            ShiftInfo.test();
+           textBox_result.Text= ShiftInfo.ReadJsonText();
 
         }
 
