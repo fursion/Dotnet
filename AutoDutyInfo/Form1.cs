@@ -25,16 +25,10 @@ namespace AutoDutyInfo
         }
         private void button_Create_Click(object sender, EventArgs e)
         {
-            textBox_result.Text = ShiftInfo.ReadJsonText();
+            DutyInfo.Init();
             DataTable table = ExcelTools.ReadExcel("./Config/班表.xlsx", "IFS班表", true);
-            int count = table.Rows.Count;
-            for (int index = 0; index < count; index++)
-            {
-                System.Console.WriteLine(table.Rows[index][0]);
-                if (table.Rows[index][0].ToString() == "杜洁")
-                    System.Console.WriteLine(index);
-
-            }
+            ExcelTools.Traversal_duty_Table(table);
+         
         }
         private void button_update_Click(object sender, EventArgs e)
         {

@@ -9,7 +9,7 @@ namespace AutoDutyInfo.Core
 {
     public static class ExcelTools
     {
-        public static DataTable ReadExcel(string Excelfilepath, string sheetName = null, bool IsFirstRowColumnName=true)
+        public static DataTable ReadExcel(string Excelfilepath, string sheetName = null, bool IsFirstRowColumnName = true)
         {
             DataTable dataTable = new DataTable();
             FileStream ExcelSr = new FileStream(Excelfilepath, FileMode.Open, FileAccess.Read);
@@ -79,8 +79,18 @@ namespace AutoDutyInfo.Core
                 return null;
             }
         }
-        public static void Traversal_duty_Table(){
-            
+        public static void Traversal_duty_Table(DataTable table)
+        {
+            int count = table.Rows.Count;
+            for (int index = 0; index < count; index++)
+            {
+                System.Console.WriteLine(table.Rows[index][0]);
+                var item = table.Rows[index][0].ToString();
+                if (DutyInfo.link_dict.ContainsKey(item)){
+                    System.Console.WriteLine( DutyInfo.link_dict[item]);                
+                }
+
+            }
         }
     }
 }
