@@ -38,3 +38,10 @@ D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.dll
 D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\ref\AutoDutyInfo.dll
 D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.pdb
 D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.genruntimeconfig.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\NOTICE.TXT
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\NPOI.OOXML.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\NPOI.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.csproj.CopyComplete

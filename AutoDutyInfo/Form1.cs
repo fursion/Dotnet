@@ -15,16 +15,29 @@ namespace AutoDutyInfo
     {
         public Form1()
         {
-            InitializeComponent();       
+            InitializeComponent();
         }
 
         private void button_copy_Click(object sender, EventArgs e)
         {
-            var str=textBox_result.Text;
+            var str = textBox_result.Text;
             Clipboard.SetDataObject(str);
         }
-        private void button_Create_Click(object sender,EventArgs e){
-           textBox_result.Text= ShiftInfo.ReadJsonText();
+        private void button_Create_Click(object sender, EventArgs e)
+        {
+            textBox_result.Text = ShiftInfo.ReadJsonText();
+            DataTable table = ExcelTools.ReadExcel("./Config/班表.xlsx", "IFS班表", true);
+            int count = table.Rows.Count;
+            for (int index = 0; index < count; index++)
+            {
+                System.Console.WriteLine(table.Rows[index][0]);
+                if (table.Rows[index][0].ToString() == "杜洁")
+                    System.Console.WriteLine(index);
+
+            }
+        }
+        private void button_update_Click(object sender, EventArgs e)
+        {
 
         }
 
