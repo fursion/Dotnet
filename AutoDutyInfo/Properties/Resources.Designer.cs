@@ -69,5 +69,15 @@ namespace AutoDutyInfo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] 班表 {
+            get {
+                object obj = ResourceManager.GetObject("班表", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

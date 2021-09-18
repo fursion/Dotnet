@@ -73,7 +73,7 @@
             this.button_Create.Name = "button_Create";
             this.button_Create.Size = new System.Drawing.Size(94, 29);
             this.button_Create.TabIndex = 2;
-            this.button_Create.Text = "Create";
+            this.button_Create.Text = "生成";
             this.button_Create.UseVisualStyleBackColor = true;
             this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
@@ -83,17 +83,17 @@
             this.button_copy.Name = "button_copy";
             this.button_copy.Size = new System.Drawing.Size(94, 30);
             this.button_copy.TabIndex = 6;
-            this.button_copy.Text = "Copy";
+            this.button_copy.Text = "复制";
             this.button_copy.UseVisualStyleBackColor = true;
             this.button_copy.Click += new System.EventHandler(this.button_copy_Click);
             // 
             // button_update
             // 
-            this.button_update.Location = new System.Drawing.Point(648, 399);
+            this.button_update.Location = new System.Drawing.Point(618, 399);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(200, 30);
             this.button_update.TabIndex = 8;
-            this.button_update.Text = "Update Shift table";
+            this.button_update.Text = "获取最新班表";
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 

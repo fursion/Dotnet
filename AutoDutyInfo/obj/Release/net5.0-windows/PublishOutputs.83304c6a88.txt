@@ -1,0 +1,12 @@
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.exe
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\NOTICE.TXT
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.deps.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.runtimeconfig.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.dll.config
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\AutoDutyInfo.pdb
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\NPOI.OOXML.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\NPOI.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\NPOI.OpenXml4Net.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\NPOI.OpenXmlFormats.dll
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\publish\ICSharpCode.SharpZipLib.dll

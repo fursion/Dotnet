@@ -11,7 +11,6 @@ public static class MethodExtension
     {
         if (null != textBox)
         {
-            System.Console.WriteLine(textBox.Lines.Length);
             if (textBox.Lines.Length > 0)
                 textBox.AppendText("\r\n");
             textBox.AppendText(text);

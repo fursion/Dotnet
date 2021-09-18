@@ -1,0 +1,4 @@
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\publish\AutoDutyInfo.pdb
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\publish\NOTICE.TXT
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\publish\AutoDutyInfo.dll.config
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\publish\AutoDutyInfo.exe

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AutoDutyInfo</id>
+    <version>1.0.0</version>
+    <authors>AutoDutyInfo</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="DotNetCore.NPOI" version="1.2.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\AutoDutyInfo.runtimeconfig.json" target="lib\net5.0-windows7.0\AutoDutyInfo.runtimeconfig.json" />
+    <file src="C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\AutoDutyInfo.dll" target="lib\net5.0-windows7.0\AutoDutyInfo.dll" />
+  </files>
+</package>
