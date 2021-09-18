@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Data.OleDb;
 using NPOI;
 using NPOI.SS.UserModel;
@@ -9,6 +10,13 @@ namespace AutoDutyInfo.Core
 {
     public static class ExcelTools
     {
+        /// <summary>
+        /// 读取班表
+        /// </summary>
+        /// <param name="Excelfilepath"></param>
+        /// <param name="sheetName"></param>
+        /// <param name="IsFirstRowColumnName"></param>
+        /// <returns></returns>
         public static DataTable ReadExcel(string Excelfilepath, string sheetName = null, bool IsFirstRowColumnName = true)
         {
             DataTable dataTable = new DataTable();
@@ -79,18 +87,52 @@ namespace AutoDutyInfo.Core
                 return null;
             }
         }
-        public static void Traversal_duty_Table(DataTable table)
+        /// <summary>
+        /// 遍历班表，查询当天值班人员，生成在班信息
+        /// </summary>
+        /// <param name="table"></param>
+        public static IEnumerable<string> Traversal_duty_Table(DataTable table, DateTime dateTime)
         {
+            int year = dateTime.Year;
+            int month = dateTime.Month;
+            int day = dateTime.Day;
+            System.Console.WriteLine(day);
             int count = table.Rows.Count;
-            for (int index = 0; index < count; index++)
+            List<string> TodayDutyinfo = new List<string>();
+            for (int index = 1; index < count; index++)
             {
-                System.Console.WriteLine(table.Rows[index][0]);
-                var item = table.Rows[index][0].ToString();
-                if (DutyInfo.link_dict.ContainsKey(item)){
-                    System.Console.WriteLine( DutyInfo.link_dict[item]);                
+                var user = table.Rows[index][0].ToString();
+                var item = table.Rows[index][day].ToString();
+                string Temp = DutyInfo.Templatedict["班次信息"];
+                if (DutyInfo.Dutyinfo_dict.ContainsKey(item))
+                {
+                    var tempname = ProcessDutyName(item);
+                    if (IsMask_Item(item))
+                        continue;
+                    Temp = string.Format(Temp, DutyInfo.Dutyinfo_dict[item].icon, tempname, DutyInfo.Dutyinfo_dict[item].Place, DutyInfo.Dutyinfo_dict[item].Timeslot, user, DutyInfo.link_dict[user]);
+                    TodayDutyinfo.Add(Temp);
                 }
-
             }
+            return TodayDutyinfo.ToArray();
+        }
+        public static string ProcessDutyName(string duty)
+        {
+            duty = duty.Substring(0, 1);
+            return duty + "班";
+        }
+        /// <summary>
+        /// 判断是否是屏蔽项
+        /// </summary>
+        /// <param name="duty"></param>
+        /// <returns></returns>
+        public static bool IsMask_Item(string duty)
+        {
+            if (duty.Contains('初') && duty.Contains('白'))
+                return true;
+            return false;
+        }
+        public static void Schedulingrules(){
+
         }
     }
 }

@@ -1,20 +1,20 @@
 {
-        "Day_shift": {
+        "白": {
             "icon": "🌕",
             "Place": "15F",
             "Timeslot": "08:30-19:30"
         },
-        "Middle_shift": {
+        "中": {
             "icon": "🌗",
             "Place": "40F",
             "Timeslot": "10:30-22:30"
         },
-        "Primary_Day_shift": {
+        "白（初）": {
             "icon": "🌗",
             "Place": "40F",
             "Timeslot": "10:00-22:00"
         },
-        "Primary_Night_shift": {
+        "夜（初）": {
             "icon": "🌑",
             "Place": "40F",
             "Timeslot": "22:00-10:00"
