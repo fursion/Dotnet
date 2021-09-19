@@ -1,5 +1,4 @@
-﻿
-namespace AutoDutyInfo
+﻿namespace AutoDutyInfo
 {
     partial class Form2
     {

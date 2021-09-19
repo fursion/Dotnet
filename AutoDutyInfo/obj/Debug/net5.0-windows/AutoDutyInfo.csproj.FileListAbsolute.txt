@@ -52,3 +52,4 @@ C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\Config\linkli
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\Config\Template.config
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\Config\Template.json
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Debug\net5.0-windows\Config\班表.xlsx
+D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.Forms.Form1.resources
