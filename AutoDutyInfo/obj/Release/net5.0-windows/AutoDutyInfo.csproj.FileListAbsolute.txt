@@ -12,7 +12,6 @@ C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\NPOI.dll
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\NPOI.OpenXml4Net.dll
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\NPOI.OpenXmlFormats.dll
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\ICSharpCode.SharpZipLib.dll
-C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.csproj.AssemblyReference.cache
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.Form1.resources
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.Properties.Resources.resources
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.csproj.GenerateResource.cache
