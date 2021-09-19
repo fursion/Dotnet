@@ -24,3 +24,11 @@ C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInf
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\ref\AutoDutyInfo.dll
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.pdb
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.genruntimeconfig.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\App.config
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\AppSetting.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\DutyInfo.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\linklist.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\Template.config
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\Template.json
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\班表.xlsx
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.csproj.AssemblyReference.cache

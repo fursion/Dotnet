@@ -31,7 +31,6 @@
         private void InitializeComponent()
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.button_Create = new System.Windows.Forms.Button();
             this.button_copy = new System.Windows.Forms.Button();
@@ -47,17 +46,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(0, 404);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "生成结果";
             // 
             // textBox_result
             // 
@@ -116,7 +104,6 @@
             this.Controls.Add(this.button_Create);
             this.Controls.Add(this.button_copy);
             this.Controls.Add(this.button_update);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox_result);
@@ -124,6 +111,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "AutoDutyInfo";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,7 +121,6 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Button button_Create;
         private System.Windows.Forms.Button button_copy;

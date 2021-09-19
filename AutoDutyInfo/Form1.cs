@@ -27,7 +27,7 @@ namespace AutoDutyInfo
         {
             textBox_result.Clear();
             DutyInfo.Init();
-            DataTable table = ExcelTools.ReadExcel("./Config/班表.xlsx", "IFS班表", true);
+            DataTable table = ExcelTools.ReadExcel(System.Configuration.ConfigurationManager.AppSettings["班表"], "IFS班表", true);
             textBox_result.NewLine(DutyInfo.Templatedict["班次表头"]);
             var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, dateTimePicker1.Value);
             foreach (var item in TodayDutyinfo)
@@ -38,7 +38,7 @@ namespace AutoDutyInfo
         }
         private void button_update_Click(object sender, EventArgs e)
         {
-            //
+            ExcelDownload.Test();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -49,6 +49,11 @@ namespace AutoDutyInfo
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             textBox_result.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
