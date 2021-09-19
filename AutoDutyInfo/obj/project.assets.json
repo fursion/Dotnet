@@ -376,28 +376,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fursion\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Du\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CSharp-Git\\Dotnet\\AutoDutyInfo\\AutoDutyInfo.csproj",
+      "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\AutoDutyInfo.csproj",
       "projectName": "AutoDutyInfo",
-      "projectPath": "D:\\CSharp-Git\\Dotnet\\AutoDutyInfo\\AutoDutyInfo.csproj",
-      "packagesPath": "C:\\Users\\fursion\\.nuget\\packages\\",
-      "outputPath": "D:\\CSharp-Git\\Dotnet\\AutoDutyInfo\\obj\\",
+      "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\AutoDutyInfo.csproj",
+      "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\fursion\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net5.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
