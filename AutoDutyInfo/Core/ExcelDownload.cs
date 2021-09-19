@@ -13,15 +13,18 @@ namespace AutoDutyInfo.Core
 
         public static void Test()
         {
-            string feishufileUrl = @"https://open.feishu.cn/open-apis/drive/v1/files/:{0}/download";
-            var fileurl = string.Format(feishufileUrl, System.Configuration.ConfigurationManager.AppSettings["在线班表"]);
+            string feishufileUrl = "https://open.feishu.cn/open-apis/drive/v1/files/:{0}/download";
+            var fileurl = string.Format(feishufileUrl, "boxcnabCdefg12345");
             Console.WriteLine(fileurl);
             try
             {
-                WebRequest feishu = WebRequest.Create(fileurl);
+                HttpWebRequest feishu = (HttpWebRequest)WebRequest.Create(fileurl);
                 feishu.Method = "GET";
-                feishu.Headers.Add("Authorization: Bearer u-7f1bcd13fc57d46bac21793a18e560");
-                feishu.Credentials = CredentialCache.DefaultCredentials;
+                feishu.PreAuthenticate=true;
+                WebHeaderCollection webHeader=feishu.Headers;
+                webHeader.Add("Authorization: Bearer u-7f1bcd13fc57d46bac21793a18e560");
+                System.Console.WriteLine(feishu.Headers);
+                //feishu.Credentials = CredentialCache.DefaultCredentials;
                 HttpWebResponse response = (HttpWebResponse)feishu.GetResponse();
                 Stream dataStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(dataStream);
