@@ -32,3 +32,4 @@ C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\Temp
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\Template.json
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\bin\Release\net5.0-windows\Config\班表.xlsx
 C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.csproj.AssemblyReference.cache
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Release\net5.0-windows\AutoDutyInfo.Forms.Form1.resources

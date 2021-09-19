@@ -38,6 +38,8 @@ namespace AutoDutyInfo
         }
         private void button_update_Click(object sender, EventArgs e)
         {
+            Form2 form = new Form2();
+            form.test();
             ExcelDownload.Test();
         }
 
