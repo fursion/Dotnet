@@ -49,7 +49,7 @@
         }
         public void test()
         {
-            webBrowser.Navigate("https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.forms.webbrowser?view=net-5.0");
+            webBrowser.Navigate("https://bytedance.feishu.cn/sheets/KTxRaTxPWpZA7SweQt2Daf");
         }
         #endregion
 

@@ -40,6 +40,7 @@ namespace AutoDutyInfo
         {
             Form2 form = new Form2();
             form.test();
+            form.Show();
             ExcelDownload.Test();
         }
 
