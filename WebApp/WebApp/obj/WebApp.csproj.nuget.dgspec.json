@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj": {}
+    "D:\\CSharp-Git\\Dotnet\\WebApp\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj": {
+    "D:\\CSharp-Git\\Dotnet\\WebApp\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj",
-        "projectName": "WebServer",
-        "projectPath": "D:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj",
+        "projectUniqueName": "D:\\CSharp-Git\\Dotnet\\WebApp\\WebApp\\WebApp.csproj",
+        "projectName": "WebApp",
+        "projectPath": "D:\\CSharp-Git\\Dotnet\\WebApp\\WebApp\\WebApp.csproj",
         "packagesPath": "C:\\Users\\fursion\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp-Git\\Dotnet\\WebServer\\obj\\",
+        "outputPath": "D:\\CSharp-Git\\Dotnet\\WebApp\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,12 +43,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.6.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -60,6 +54,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

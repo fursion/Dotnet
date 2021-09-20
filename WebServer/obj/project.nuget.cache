@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "OekJ8cUfMLUZtNIKs/MVYvOv5bDPbET48wUMs44zyrRdwH5qPICs8L7zeXcPpr/sJ3fnU95eI7+047SYeTG68g==",
+  "dgSpecHash": "g3d4dTRTNnR1ZMIjLPzd2j8tMGXI5rcdlQf3rDXosWsI9Ju5bCyljRedHZZ9nqKB4CYBsb0SR8eqgdXWmZdoiw==",
   "success": true,
   "projectFilePath": "D:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\fursion\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\fursion\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\fursion\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\fursion\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\fursion\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\fursion\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
   "logs": []
 }
