@@ -22,6 +22,16 @@ namespace WebServer.WebAPI
         {
             return "urltest";
         }
+        [HttpGet("{id}")]
+        public string Geta()
+        {
+            return "urltest";
+        }
+        [HttpGet("{n}")]
+        public string Getb(string s)
+        {
+            return s;
+        }
         [HttpPost("post")]
         public string Info()
         {

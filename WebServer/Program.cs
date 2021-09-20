@@ -1,13 +1,19 @@
 ﻿using System;
-using Microsoft.AspNetCore.Http; 
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 namespace WebServer
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Init()
         {
+            Console.Title = "WebServer";
+            Console.BackgroundColor = ConsoleColor.Blue;
+        }
+        public static void Main(string[] args)
+        {
+            Init();
             CreateHostBuilder(args).Build().Run();
         }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
