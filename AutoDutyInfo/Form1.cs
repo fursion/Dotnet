@@ -40,9 +40,13 @@ namespace AutoDutyInfo
         }
         private async void button_update_Click(object sender, EventArgs e)
         {
-           var str=await GetAccess_Token();
-           textBox_result.NewLine(str);
-           System.Console.WriteLine(str);
+            Form2 form=new Form2();
+            form.test();
+            form.Show();
+        
+          // var str=await GetAccess_Token();
+           //textBox_result.NewLine(str);
+          // System.Console.WriteLine(str);
         }
         public async Task<string> GetTask()
         {

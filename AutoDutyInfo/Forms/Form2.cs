@@ -16,5 +16,10 @@ namespace AutoDutyInfo
         {
             InitializeComponent();
         }
+          public void test()
+        {
+            string url=string.Format("file:{0}","/Core/JS/PullToken.html");
+            webBrowser.Navigate(url);
+        }
     }
 }
