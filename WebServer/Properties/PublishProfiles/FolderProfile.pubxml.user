@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2021-09-21T07:59:53.2593329Z;True|2021-09-21T15:43:54.7562278+08:00;</History>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿[Unit]
+Description="WebService"
+[Service]
+Type=simple
+GuessMainPID=true
+WorkingDirectory=/share/vsftpd/wwwroot/
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/dotnet  /share/vsftpd/wwwroot/WebServer.dll             
+Restart=always
+[Install]
+WantedBy=multi-user.target

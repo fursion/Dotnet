@@ -1,0 +1,5 @@
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.deps.json
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.runtimeconfig.json
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.pdb
