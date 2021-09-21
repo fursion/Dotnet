@@ -27,6 +27,7 @@ namespace WebServer
         {
 
             services.AddControllers();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +37,11 @@ namespace WebServer
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(defaultFilesOptions);
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();

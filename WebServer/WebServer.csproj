@@ -4,5 +4,10 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <StartupObject>WebServer.Program</StartupObject>
+    <UserSecretsId>643c09c4-b6df-4a57-9a51-9d63c7d514af</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
 </Project>
