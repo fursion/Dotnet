@@ -67,3 +67,4 @@ D:\CSharp-Git\Dotnet\AutoDutyInfo\bin\Debug\net5.0-windows\NPOI.OpenXmlFormats.d
 D:\CSharp-Git\Dotnet\AutoDutyInfo\bin\Debug\net5.0-windows\ICSharpCode.SharpZipLib.dll
 D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.Form2.resources
 D:\CSharp-Git\Dotnet\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.csproj.CopyComplete
+C:\Users\Du\Documents\CSharp\AutoDutyInfo\obj\Debug\net5.0-windows\AutoDutyInfo.Form2.resources
