@@ -8,9 +8,15 @@
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKnzAJG7VS0WkSTS5bfrOlQAAAAACAAAAAAAQZgAAAAEAACAAAADjOYJ5+j2xcp9zYnpoy0v7n1kNW82Qob2KHG5kd1wFgQAAAAAOgAAAAAIAACAAAAAD31JbJcdBa7bntVMha/7vRgm3nkEbNTGggbfA4tIrIBAAAACwEJ62Q3j6TVsGf8rJSCMpQAAAALHvyLWgKVx9uoJDOeS0qtsj58o8y8JoAcvKDkP0zruSW8Ny4Pkn0PqfLJMlqc5R0LHScIi0NlIbI4SnvXTvJxY=</EncryptedPassword>
     <_PublishTargetUrl>ftp://fursion.cn/wwwroot</_PublishTargetUrl>
-    <History>True|2021-09-22T02:01:08.6543566Z;True|2021-09-21T16:17:53.5320539+08:00;True|2021-09-21T16:14:51.5238168+08:00;True|2021-09-21T16:13:53.3036324+08:00;</History>
+    <History>False|2021-09-22T11:48:35.3885642Z;False|2021-09-22T19:47:21.8299512+08:00;False|2021-09-22T19:45:03.7972000+08:00;False|2021-09-22T19:44:10.1160701+08:00;False|2021-09-22T19:43:28.5718492+08:00;False|2021-09-22T19:41:42.5204435+08:00;False|2021-09-22T19:40:52.5514024+08:00;False|2021-09-22T19:39:20.2018824+08:00;True|2021-09-22T15:43:16.7910007+08:00;True|2021-09-22T14:46:33.5180890+08:00;True|2021-09-22T14:34:42.4561872+08:00;True|2021-09-22T12:56:04.9235995+08:00;False|2021-09-22T12:07:26.8994326+08:00;False|2021-09-22T12:06:26.8772490+08:00;True|2021-09-22T11:37:47.3591898+08:00;False|2021-09-22T11:37:03.3997246+08:00;True|2021-09-22T10:01:08.6543566+08:00;True|2021-09-21T16:17:53.5320539+08:00;True|2021-09-21T16:14:51.5238168+08:00;True|2021-09-21T16:13:53.3036324+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="BouncyCastle.Crypto.dll">
+      <publishTime>02/24/2020 23:29:24</publishTime>
+    </File>
+    <File Include="Config/duty.xlsx">
+      <publishTime>09/17/2021 21:42:57</publishTime>
+    </File>
     <File Include="Config/DutyInfo.json">
       <publishTime>09/18/2021 16:49:17</publishTime>
     </File>
@@ -18,7 +24,10 @@
       <publishTime>09/18/2021 11:39:10</publishTime>
     </File>
     <File Include="Config/Template.json">
-      <publishTime>09/18/2021 11:01:23</publishTime>
+      <publishTime>09/22/2021 10:13:06</publishTime>
+    </File>
+    <File Include="Config/班表.xlsx">
+      <publishTime>09/17/2021 21:42:57</publishTime>
     </File>
     <File Include="cs/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>11/12/2020 08:15:14</publishTime>
@@ -73,6 +82,9 @@
     </File>
     <File Include="Humanizer.dll">
       <publishTime>05/05/2017 07:33:58</publishTime>
+    </File>
+    <File Include="ICSharpCode.SharpZipLib.dll">
+      <publishTime>11/21/2020 23:52:52</publishTime>
     </File>
     <File Include="it/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>11/12/2020 08:15:14</publishTime>
@@ -155,6 +167,18 @@
     <File Include="Newtonsoft.Json.dll">
       <publishTime>03/25/2018 01:44:14</publishTime>
     </File>
+    <File Include="NPOI.dll">
+      <publishTime>07/30/2021 04:55:44</publishTime>
+    </File>
+    <File Include="NPOI.OOXML.dll">
+      <publishTime>07/30/2021 04:55:44</publishTime>
+    </File>
+    <File Include="NPOI.OpenXml4Net.dll">
+      <publishTime>07/30/2021 04:55:44</publishTime>
+    </File>
+    <File Include="NPOI.OpenXmlFormats.dll">
+      <publishTime>07/30/2021 04:55:44</publishTime>
+    </File>
     <File Include="pl/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>11/12/2020 08:15:14</publishTime>
     </File>
@@ -206,6 +230,12 @@
     <File Include="System.Composition.TypedParts.dll">
       <publishTime>11/05/2016 12:55:46</publishTime>
     </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>05/15/2018 21:29:38</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 21:29:44</publishTime>
+    </File>
     <File Include="tr/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>11/12/2020 08:15:14</publishTime>
     </File>
@@ -219,25 +249,25 @@
       <publishTime>11/12/2020 08:16:28</publishTime>
     </File>
     <File Include="WebServer">
-      <publishTime>09/22/2021 09:59:39</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="WebServer.deps.json">
-      <publishTime>09/22/2021 09:59:40</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="WebServer.dll">
-      <publishTime>09/22/2021 09:59:39</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="WebServer.pdb">
-      <publishTime>09/22/2021 09:59:39</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="WebServer.runtimeconfig.json">
-      <publishTime>09/22/2021 09:59:40</publishTime>
+      <publishTime>09/22/2021 11:37:26</publishTime>
     </File>
     <File Include="WebServer.Views.dll">
-      <publishTime>09/22/2021 09:59:39</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="WebServer.Views.pdb">
-      <publishTime>09/22/2021 09:59:39</publishTime>
+      <publishTime>09/22/2021 15:43:06</publishTime>
     </File>
     <File Include="zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>11/12/2020 08:15:14</publishTime>

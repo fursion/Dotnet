@@ -112,3 +112,15 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\Razor\Views\Shared\_La
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\WebServer.RazorTargetAssemblyInfo.cs
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\WebServer.Views.pdb
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\WebServer.csproj.CopyComplete
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\NPOI.OOXML.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\NPOI.OpenXml4Net.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\NPOI.OpenXmlFormats.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\NPOI.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\ICSharpCode.SharpZipLib.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\Razor\Views\DutyInfo\Index.cshtml.g.cs
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\Config\duty.xlsx
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\Razor\Views\DutyInfo\GetInfo.cshtml.g.cs

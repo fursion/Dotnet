@@ -43,6 +43,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.4, )"
             }
           },
           "imports": [

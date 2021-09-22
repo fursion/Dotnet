@@ -148,7 +148,6 @@ namespace AutoDutyInfo.Core
             int NowMouthDays = System.Threading.Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(dateTime.Year, dateTime.Month);
             foreach (var item in tuples)
             {
-                System.Console.WriteLine(item.Item1);
                 string Temp = DutyInfo.Templatedict["班次信息"];
                 var tempname = ProcessDutyName(item.Item2);
                 if (!DutyInfo.link_dict.ContainsKey(item.Item1))
@@ -230,7 +229,7 @@ namespace AutoDutyInfo.Core
         {
             if (Name.Length == 2)
             {
-                Name = Name[0] + "   " + Name[1];
+                Name = Name[0] + "  " +Name[1];
             }
             return Name;
         }

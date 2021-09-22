@@ -109,3 +109,14 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\Razor\Views\
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\WebServer.RazorTargetAssemblyInfo.cs
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\WebServer.Views.pdb
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\WebServer.csproj.CopyComplete
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\NPOI.OOXML.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\NPOI.OpenXml4Net.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\NPOI.OpenXmlFormats.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\NPOI.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\BouncyCastle.Crypto.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\ICSharpCode.SharpZipLib.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\System.Configuration.ConfigurationManager.dll
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\Razor\Views\DutyInfo\Index.cshtml.g.cs
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\Config\duty.xlsx
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\Razor\Views\DutyInfo\GetInfo.cshtml.g.cs

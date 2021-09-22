@@ -2,6 +2,7 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\W
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\DutyInfo.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\linklist.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\Template.json
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\duty.xlsx
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.deps.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.runtimeconfig.json
@@ -23,11 +24,19 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\M
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\NPOI.OOXML.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\NPOI.OpenXml4Net.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\NPOI.OpenXmlFormats.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\NPOI.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\BouncyCastle.Crypto.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\ICSharpCode.SharpZipLib.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Composition.AttributedModel.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Composition.Convention.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Composition.Hosting.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Composition.Runtime.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Composition.TypedParts.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\es\Microsoft.CodeAnalysis.resources.dll
