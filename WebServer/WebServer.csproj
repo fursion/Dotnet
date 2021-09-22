@@ -8,10 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <None Remove="Config\班表.xlsx" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\新文件夹\" />
+    <Content Include="Config\班表.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="NPOI" Version="2.5.4" />
   </ItemGroup>
 </Project>
