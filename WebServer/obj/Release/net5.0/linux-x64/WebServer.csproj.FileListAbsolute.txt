@@ -120,3 +120,5 @@ C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\System.Secur
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\Razor\Views\DutyInfo\Index.cshtml.g.cs
 C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\Config\duty.xlsx
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\Razor\Views\DutyInfo\GetInfo.cshtml.g.cs
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\Config\TempEnd.txt
+C:\Users\Du\Documents\CSharp\WebServer\bin\Release\net5.0\linux-x64\Config\TempHeader.txt

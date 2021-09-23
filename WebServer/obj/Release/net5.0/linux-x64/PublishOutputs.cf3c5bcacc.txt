@@ -3,6 +3,8 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\C
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\linklist.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\Template.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\duty.xlsx
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\TempEnd.txt
+C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\Config\TempHeader.txt
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.dll
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.deps.json
 C:\Users\Du\Documents\CSharp\WebServer\obj\Release\net5.0\linux-x64\PubTmp\Out\WebServer.runtimeconfig.json

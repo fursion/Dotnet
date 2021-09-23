@@ -145,3 +145,5 @@ C:\Users\Du\Documents\CSharp\WebServer\obj\Debug\net5.0\WebServer.csproj.Assembl
 C:\Users\Du\Documents\CSharp\WebServer\obj\Debug\net5.0\Razor\Views\DutyInfo\Index.cshtml.g.cs
 C:\Users\Du\Documents\CSharp\WebServer\bin\Debug\net5.0\Config\duty.xlsx
 C:\Users\Du\Documents\CSharp\WebServer\obj\Debug\net5.0\Razor\Views\DutyInfo\GetInfo.cshtml.g.cs
+C:\Users\Du\Documents\CSharp\WebServer\bin\Debug\net5.0\Config\TempEnd.txt
+C:\Users\Du\Documents\CSharp\WebServer\bin\Debug\net5.0\Config\TempHeader.txt
