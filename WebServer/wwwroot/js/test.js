@@ -1,1 +1,4 @@
-console.log("测试");
+function copyduty(){
+    var v=document.getElementById("duty_content").ariaValueText;
+    
+}

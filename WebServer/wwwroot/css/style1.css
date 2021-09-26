@@ -1,8 +1,8 @@
 div{
     width: 1000px;
-    height: 800px;
+    height: 400px;
+    text-align: left;
     border: 2px solid royalblue;
     background-color: pink;
-    background-image: url(/Images/HelpDesk.jpg);
-    text-align: left;
+    background-image: url(/Images/HelpDesk.jpg); 
 }
