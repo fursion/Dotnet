@@ -27,3 +27,10 @@ h1{
     background-color: lawngreen;
     text-align: center;
 }
+.duty_content{
+    width: 1000px;
+    height: 400px;
+    text-align: left;
+    font-style: normal;
+    resize: none;
+}
