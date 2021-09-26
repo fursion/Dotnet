@@ -3,30 +3,29 @@
 *@
 @{
     ViewData["Title"] = "IT";
+    Layout = "_Layout";
+
 }
 
-
 <head>
-    <h1>今日IT在班信息</h1>
-    <title>@ViewData["Title"] --info</title>
     <link rel="stylesheet" href="/css/HOMEStyle.css">
-    <script type="javascript" src="/js/test.js"></script>
-</head>
+    <script type="text/javascript" src="/js/test.js"></script>
 
+</head>
 <body>
     <div id="duty_time">
         <p>@DateTime.Now.ToString("yyyyMMdd")</p>
     </div>
-    <div id="duty_content">
-        <textarea name="duty_text_area" id="duty_text" cols="30" rows="10" readonly>
-
-            @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
-            {
-                
-               var str = ((List<string>)ViewData["TodayDuty"])[lin];
-            }
-        </textarea>
-
-        <button class="button_style" onclick="">复制</button>
+    <div id="duty_content">  
+        <button class="button_style" onclick="updatetest">复制</button>
     </div>
 </body>
+<form>
+    <textarea name="duty_content" id="duty_content" cols="30" rows="10">
+        @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
+        {
+            var str = ((List<string>)ViewData["TodayDuty"])[lin];
+        }
+
+    </textarea>
+</form>
