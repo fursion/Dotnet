@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\WebServer.csproj",
+  "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\WebServer.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,32 +15619,32 @@
   "RootNamespace": "WebServer",
   "Documents": [
     {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\DutyInfo\\Index.cshtml",
-      "TargetPath": "Views\\DutyInfo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\HelloWorld\\Welcome.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\DutyInfo\\GetInfo.cshtml",
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\DutyInfo\\GetInfo.cshtml",
       "TargetPath": "Views\\DutyInfo\\GetInfo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\HelloWorld\\Welcome.cshtml",
+      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\CSharp-Git\\Dotnet\\WebServer\\Views\\HelloWorld\\Index.cshtml",
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\DutyInfo\\Index.cshtml",
+      "TargetPath": "Views\\DutyInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Du\\Documents\\CSharp\\WebServer\\Views\\HelloWorld\\Index.cshtml",
       "TargetPath": "Views\\HelloWorld\\Index.cshtml",
       "FileKind": "mvc"
     }

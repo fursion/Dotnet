@@ -7,14 +7,17 @@
 <h1>今日IT在班信息</h1>
 <title>@ViewData["Title"] --info</title>
 
+<head>
+    <link rel="stylesheet" href="/css/style1.css">
+</head>
 <div>
     <p>@DateTime.Now.ToString("yyyyMMdd")</p>
 </div>
-@for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
-{
-    <li>@(((List<string>)ViewData["TodayDuty"])[lin])</li>
-}
-
+<div>
+    @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
+    {
+        <li>@(((List<string>)ViewData["TodayDuty"])[lin])</li>
+    }
+</div>
 <dir>
 </dir>
-
