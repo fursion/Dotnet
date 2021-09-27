@@ -9,12 +9,10 @@ h1{
 #duty_time{
     width: 100px;
     height: 30px;
-    border:2px solid royalblue;
 }
 #duty_content{
     width: 1000px;
     height: 400px;
-    border:2px solid royalblue;
     text-align: left;
     font-style: normal;
 }
@@ -24,7 +22,6 @@ h1{
 .button_style{
     width: 100px;
     height: 30px;
-    background-color: lawngreen;
     text-align: center;
 }
 .duty_content{

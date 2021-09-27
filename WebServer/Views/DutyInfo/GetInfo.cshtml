@@ -1,4 +1,5 @@
-﻿@*
+﻿@page
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -16,16 +17,21 @@
     <div id="duty_time">
         <p>@DateTime.Now.ToString("yyyyMMdd")</p>
     </div>
-    <div id="duty_content">  
-        <button class="button_style" onclick="updatetest">复制</button>
-    </div>
-</body>
-<form>
-    <textarea name="duty_content" id="duty_content" cols="30" rows="10">
+    <div id="duty_content">
+        <textarea name="duty_content" id="duty_content" cols="30" rows="10">
         @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
         {
             var str = ((List<string>)ViewData["TodayDuty"])[lin];
         }
 
     </textarea>
-</form>
+        <button class="button_style" onclick=@updatetest()>复制</button>
+    </div>
+</body>
+@{
+    object updatetest()
+    {
+        Console.WriteLine("12345677");
+        return null;
+    }
+}
