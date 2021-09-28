@@ -9,21 +9,14 @@
 
 <head>
     <link rel="stylesheet" href="/css/HOMEStyle.css">
-    <script type="text/javascript" src="/js/test.js"></script>
-
 </head>
 <body>
     <div id="duty_time">
         <p>@DateTime.Now.ToString("yyyyMMdd")</p>
     </div>
     <div id="duty_content">
-        <textarea name="duty_content" id="duty_content" cols="30" rows="10">
-        @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
-        {
-            var str = ((List<string>)ViewData["TodayDuty"])[lin];
-            @str
-        }
-    </textarea>
+        
+        @Html.TextBox("text", ViewData["TodayDuty"],new {@class= "duty_content" })
         <button class="button_style" onclick=@updatetest()>复制</button>
     </div>
 </body>

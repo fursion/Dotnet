@@ -27,7 +27,7 @@ namespace WebServer
         {
 
             services.AddControllers();
-            services.AddRazorPages();
+            //services.AddRazorPages();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
