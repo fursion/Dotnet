@@ -1,5 +1,4 @@
-﻿@page
-@*
+﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -22,8 +21,8 @@
         @for (int lin = 0; lin < ((List<string>)ViewData["TodayDuty"]).Count; lin++)
         {
             var str = ((List<string>)ViewData["TodayDuty"])[lin];
+            @str
         }
-
     </textarea>
         <button class="button_style" onclick=@updatetest()>复制</button>
     </div>
