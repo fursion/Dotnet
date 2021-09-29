@@ -1,4 +1,4 @@
-.Home-p1{
+.Home-p1 {
     display: inline-block;
     white-space: normal;
     text-align: center;
@@ -6,26 +6,40 @@
     background: #e5e5e5;
     width: 100%;
     height: 40px;
-
-
 }
-.home-p1-sub{
+
+.home-p1-sub {
     display: block;
     width: 100%;
     height: 30px;
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    background: #fff;;
+    background: #fff;
 }
-.time-lable{
+
+.duty-title-bar {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #e5e5e5;
+}
+
+.time-lable {
     width: auto;
     height: inherit;
-    border-top:  1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
-.duty_content{
-    width: 1000px;
+
+.duty-content {
+    width: 100%;
     height: 300px;
     border: 1px solid #e5e5e5;
+}
+.duty-content-font{
+    width: 100%;
+    height: 400px;
+    text-align: left;
+    font-size: 1px;
+    resize: none;
 }
