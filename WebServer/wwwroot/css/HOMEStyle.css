@@ -22,6 +22,7 @@ h1{
 .button_style{
     width: 100px;
     height: 30px;
+    border: 1px solid #e5e5e5;
     text-align: center;
 }
 .duty_content{
@@ -30,4 +31,10 @@ h1{
     text-align: left;
     font-style: normal;
     resize: none;
+    border: 1px solid #e5e5e5;
+}
+.duty_content{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #e5e5e5;
 }
