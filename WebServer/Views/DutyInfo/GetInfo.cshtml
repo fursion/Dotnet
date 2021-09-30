@@ -15,10 +15,8 @@
 
 <body>
     <div id="duty_content">
-        <div class="form-group">
-            <label for="">@DateTime.Now.ToString("yy年MM月dd日") IFS IT在班信息</label>
-        </div>
-        <textarea name="duty" id="duty" class="duty-content-font" cols="50" rows="20">@{
+        <label class="duty-datelable-style" for="">@DateTime.Now.ToString("yy年MM月dd日") IFS IT在班信息</label>
+        <textarea name="duty" id="duty" class="duty-content-font" cols="200" rows="200">@{
                 List<string> strlist = ((List<string>)ViewData["TodayDuty"]);
                 int count = strlist.Count;
                 @for (int i = 0; i < count; i++)

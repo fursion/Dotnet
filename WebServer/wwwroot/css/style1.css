@@ -44,3 +44,8 @@
     font-size: 1px;
     resize: none;
 }
+.duty-datelable-style{
+
+    border-top: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+}
