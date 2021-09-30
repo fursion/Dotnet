@@ -19,21 +19,16 @@
     <div id="duty_content">
         <div class="form-group">
             <label for="">@DateTime.Now.ToString("yy年MM月dd日") IFS IT在班信息</label>
-            <input type="text" class="duty-content-font">
+            <div class="duty-content-font">
             @{
                     List<string> strlist = ((List<string>)ViewData["TodayDuty"]);
                     int count = strlist.Count;
                 }
                 @for (int i = 0; i < count; i++)
                 {
-                <li>@strlist[i]</li>
+                <font>@strlist[i]</font><br/>
                 }
-            </input>
-            <textarea class="duty-content-font" name="duty-info-text-content" id="duty-info-text-content" rows="0"
-                cols="80">
-
-            <li>测试</li>
-          </textarea>
+            </div>
         </div>
 
         <!--Html.TextBox("text", ViewData["TodayDuty"],new {class= "duty_content" })-->
@@ -47,3 +42,6 @@
         return null;
     }
 }
+<script>
+    
+</script>
