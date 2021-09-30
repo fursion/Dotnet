@@ -10,38 +10,32 @@
 <head>
     <link rel="stylesheet" href="/css/HOMEStyle.css">
     <link rel="stylesheet" href="~/css/style1.css">
+    <script src="~/js/dutyinfo.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <div id="duty_time" class="Home-p1">
-        <p class="time-lable">@DateTime.Now.ToString("yyyyMMdd")</p>
-    </div>
     <div id="duty_content">
         <div class="form-group">
             <label for="">@DateTime.Now.ToString("yy年MM月dd日") IFS IT在班信息</label>
-            <div class="duty-content-font">
-            @{
-                    List<string> strlist = ((List<string>)ViewData["TodayDuty"]);
-                    int count = strlist.Count;
-                }
+        </div>
+        <textarea name="duty" id="duty" class="duty-content-font" cols="50" rows="20">@{
+                List<string> strlist = ((List<string>)ViewData["TodayDuty"]);
+                int count = strlist.Count;
                 @for (int i = 0; i < count; i++)
                 {
-                <font>@strlist[i]</font><br/>
+                    @(strlist[i]+"\n")
                 }
-            </div>
-        </div>
-
-        <!--Html.TextBox("text", ViewData["TodayDuty"],new {class= "duty_content" })-->
-        <button class="button_style" onclick=@updatetest()>复制</button>
+            }</textarea>
+            <!--<script>
+            function copytext() {
+                var textarea = document.getElementById('duty');
+                var text = textarea.value;
+                textarea.select();
+                document.execCommand('copy');
+            }-->
+        </script>
+        <button type="button" class="button_style" onclick="copytext()">复制</button>
     </div>
+
+
 </body>
-@{
-    object updatetest()
-    {
-        Console.WriteLine("12345677");
-        return null;
-    }
-}
-<script>
-    
-</script>
