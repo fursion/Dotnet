@@ -381,18 +381,18 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\AutoDutyInfo.csproj",
+      "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\AutoDutyInfo\\AutoDutyInfo.csproj",
       "projectName": "AutoDutyInfo",
-      "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\AutoDutyInfo.csproj",
+      "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\AutoDutyInfo\\AutoDutyInfo.csproj",
       "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\obj\\",
+      "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\AutoDutyInfo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows"
+        "net5.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},

@@ -108,7 +108,7 @@ namespace WebServer.Controllers
                 foreach (var item in header)
                     datainfo.Add(item);
             }
-            else throw new Exception();        
+            else throw new Exception();
             var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, DateTime.Now);
             foreach (var item in TodayDutyinfo)
                 datainfo.Add(item);
