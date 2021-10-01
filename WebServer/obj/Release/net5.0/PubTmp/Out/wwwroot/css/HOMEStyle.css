@@ -1,0 +1,35 @@
+h1{
+    text-align: left;
+}
+#duty_text{
+    width: 1000px;
+    height: 300px;
+    resize: none;
+}
+#duty_time{
+    width: 100px;
+    height: 30px;
+}
+#duty_content{
+    width: 1000px;
+    height: 400px;
+    text-align: left;
+    font-style: normal;
+}
+#duty_header{
+    background-image: url(/Images/HelpDesk.jpg);
+}
+.button_style{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+}
+.duty_content{
+    width: 1000px;
+    height: 400px;
+    text-align: left;
+    font-style: normal;
+    resize: none;
+    border: 1px solid #e5e5e5;
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Du\\Documents\\CSharp\\WebServer\\WebServer.csproj": {}
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Du\\Documents\\CSharp\\WebServer\\WebServer.csproj": {
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\WebServer\\WebServer.csproj",
+        "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj",
         "projectName": "WebServer",
-        "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\WebServer\\WebServer.csproj",
+        "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj",
         "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\WebServer\\obj\\publish\\linux-x64\\",
+        "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\obj\\publish\\linux-x64\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
