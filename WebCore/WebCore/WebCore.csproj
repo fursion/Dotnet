@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IOTCore\" />
+    <Folder Include="Core\IoT\" />
   </ItemGroup>
 
 </Project>

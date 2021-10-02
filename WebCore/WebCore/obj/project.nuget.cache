@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NZEJlGo2XDKcce8bH84DO2GBcm2EqgZSI+Q2FN5/wQps7UmnFD72wrtIETlUxlFTIjQCuNfJ8eZMAR/b4OzDjQ==",
+  "dgSpecHash": "Uag5TSvqm2JfguMIkwAOhgVwvO9jXVYIv0+GAmS9DutuQ7PqrdXnSzdErVWfbuhHtKPO3UpqW+NmJ2SCxUsD/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\WebCore.csproj",
+  "projectFilePath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Du\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Du\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

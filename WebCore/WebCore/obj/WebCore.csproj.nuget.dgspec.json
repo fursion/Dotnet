@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\WebCore.csproj": {}
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\WebCore.csproj": {
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\WebCore.csproj",
+        "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
         "projectName": "WebCore",
-        "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\WebCore.csproj",
+        "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
         "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\WebCore\\WebCore\\obj\\",
+        "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
