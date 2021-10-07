@@ -6683,26 +6683,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Du\\.nuget\\packages\\": {}
+    "/home/fursion/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj",
+      "projectUniqueName": "/home/fursion/development/Dotnet/WebServer/WebServer.csproj",
       "projectName": "WebServer",
-      "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\WebServer.csproj",
-      "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebServer\\obj\\",
+      "projectPath": "/home/fursion/development/Dotnet/WebServer/WebServer.csproj",
+      "packagesPath": "/home/fursion/.nuget/packages/",
+      "outputPath": "/home/fursion/development/Dotnet/WebServer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/fursion/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6748,7 +6746,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
