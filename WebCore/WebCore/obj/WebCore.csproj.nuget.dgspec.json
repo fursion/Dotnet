@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/fursion/development/Dotnet/WebCore/WebCore/WebCore.csproj": {}
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj": {}
   },
   "projects": {
-    "/home/fursion/development/Dotnet/WebCore/WebCore/WebCore.csproj": {
+    "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fursion/development/Dotnet/WebCore/WebCore/WebCore.csproj",
+        "projectUniqueName": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
         "projectName": "WebCore",
-        "projectPath": "/home/fursion/development/Dotnet/WebCore/WebCore/WebCore.csproj",
-        "packagesPath": "/home/fursion/.nuget/packages/",
-        "outputPath": "/home/fursion/development/Dotnet/WebCore/WebCore/obj/",
+        "projectPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
+        "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/fursion/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Du\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,9 +40,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -61,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
