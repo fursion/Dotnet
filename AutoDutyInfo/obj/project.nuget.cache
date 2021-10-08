@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WZ2fK4OXUfU/nJNGf3qkhcJ2j/+5M+jD129ygGjnv9D21W3tei2pKL2Nc9J76Mld8KggyxiVbCIC8YRqqcJZSQ==",
+  "dgSpecHash": "v0biThQLOxj5aLDl6NibQUzrG1dYr2NuTyjxM7QwsmQbHUbEvIGg3ZDYW5WvOa1WGBKS1udTpKMjp0hPqnb4WA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Du\\Documents\\CSharp\\AutoDutyInfo\\AutoDutyInfo.csproj",
+  "projectFilePath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\AutoDutyInfo\\AutoDutyInfo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Du\\.nuget\\packages\\dotnetcore.npoi\\1.2.3\\dotnetcore.npoi.1.2.3.nupkg.sha512",
     "C:\\Users\\Du\\.nuget\\packages\\dotnetcore.npoi.core\\1.2.3\\dotnetcore.npoi.core.1.2.3.nupkg.sha512",

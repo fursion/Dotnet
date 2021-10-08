@@ -1,3 +1,9 @@
+/*  fursion@fursion.cn
+ *  班表解析类
+ * 
+ * 
+ * 
+ */
 using System;
 using System.IO;
 using System.Collections;
@@ -9,10 +15,13 @@ using System.Data;
 
 namespace AutoDutyInfo.Core
 {
+    using ShiftsRules = ValueTuple<int, int[], string, string, string, string>;//班表规则模板，item1为排班周期，item2为索引，item3为条件值,item4为命中规则的值，item5为默认值
+    using Per_Info_OnTable = ValueTuple<string, string, int, int>;
+    using Today_Per_infos = List<ValueTuple<string, string, int, int>>;
     public static class ExcelTools
     {
         /// <summary>
-        /// 读取班表
+        /// excel读取
         /// </summary>
         /// <param name="Excelfilepath"></param>
         /// <param name="sheetName"></param>
@@ -80,6 +89,7 @@ namespace AutoDutyInfo.Core
                         dataTable.Rows.Add(dataRow);
                     }
                 }
+                ExcelSr.Dispose();
                 return dataTable;
             }
             catch (Exception e)
@@ -102,30 +112,29 @@ namespace AutoDutyInfo.Core
             /// <summary>
             /// 姓名，班次，在班表中所在行，日期
             /// </summary>
-            List<Tuple<string, string, int, int>> tuple_duty = new List<Tuple<string, string, int, int>>();
+            Today_Per_infos tuple_duty = new();
             for (int index = 1; index < count; index++)
             {
-                var user = table.Rows[index][0].ToString();
-                var item = table.Rows[index][day].ToString();
-                string Temp = DutyInfo.Templatedict["班次信息"];
+                var user = table.Rows[index][0].ToString();//获取人员名字
+                var item = table.Rows[index][day].ToString();//班次信息
+                if (IsMask_Item(item))//剔除掉屏蔽列表中班次
+                    continue;
+                item = DutyNameformat(item);//班次名称格式化
                 if (DutyInfo.Dutyinfo_dict.ContainsKey(item))
                 {
-
-                    //
-
-                    if (IsMask_Item(item))
-                        continue;
-                    var tuple = new Tuple<string, string, int, int>(user, item, index, day);
-                    tuple_duty.Add(tuple);
-
-                    //Temp = string.Format(Temp, DutyInfo.Dutyinfo_dict[item].icon, tempname, DutyInfo.Dutyinfo_dict[item].Place, DutyInfo.Dutyinfo_dict[item].Timeslot, user, DutyInfo.link_dict[user]);
-                    //TodayDutyinfo.Add(Temp);
+                    var tuple = new Per_Info_OnTable(user, item, index, day);//在班人员在班表中的源信息
+                    tuple_duty.Add(tuple);//将源信息加入源信息列表
                 }
             }
             Sortdyty(table, ref tuple_duty);
             return Createinfo(table, tuple_duty, dateTime);
         }
-        public static string ProcessDutyName(string duty)
+        /// <summary>
+        /// 班次名称格式化
+        /// </summary>
+        /// <param name="duty">格式化操作之前的名称</param>
+        /// <returns></returns>
+        public static string DutyNameformat(string duty)
         {
             duty = duty.Substring(0, 1);
             return duty + "班";
@@ -141,95 +150,119 @@ namespace AutoDutyInfo.Core
                 return true;
             return false;
         }
-        public static IEnumerable<string> Createinfo(DataTable dataTable, List<Tuple<string, string, int, int>> tuples, DateTime dateTime)
+        public static IEnumerable<string> Createinfo(DataTable dataTable, Today_Per_infos tuples, DateTime dateTime)
         {
-            List<string> TodayDutyinfo = new List<string>();
+            List<string> TodayDutyinfo = new();
             List<Tuple<string, string, int, int>> tuple_duty = new List<Tuple<string, string, int, int>>();
+            //获取这个月的天数
             int NowMouthDays = System.Threading.Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(dateTime.Year, dateTime.Month);
-            foreach (var item in tuples)
+            return locationJudge(new ShiftsRules(4, new int[] { 2 }, "白", "15F", "40F", "休"), dataTable, tuples, dateTime.Day, NowMouthDays);
+        }
+
+        /*
+         * 
+         * 判断规则模板化
+         */
+        /// <summary>
+        /// 值班地点判断
+        /// <param name="dutyCycle"/>排班周期</param>
+        /// </summary>
+        private static List<string> locationJudge(ShiftsRules rule, DataTable table, Today_Per_infos infos, int select_index, int days)
+        {
+            List<string> todayinfos = new();
+            foreach (var item in infos)
             {
+                int rest_index = 0;
                 string Temp = DutyInfo.Templatedict["班次信息"];
-                var tempname = ProcessDutyName(item.Item2);
-                if (!DutyInfo.link_dict.ContainsKey(item.Item1))
+                bool istar = true;
+                if (select_index <= days - rule.Item1)
                 {
-                    string str=string.Format("在 linkinfo.json 中没有找到:{0}的链接！",item.Item1);
-                    continue;
-                }
-                if (item.Item2.Contains('白'))
-                {
-                    if (item.Item4 + 1 > NowMouthDays)
+                    for (int i = select_index; i < days; i++)
                     {
-                        if (!dataTable.Rows[item.Item3][item.Item4 - 1].ToString().Contains('白'))
+                        if (table.Rows[item.Item3][i].ToString() == rule.Item6)
                         {
-                            formatinfo(ref Temp, item, "15F");
-                            TodayDutyinfo.Insert(0, Temp);
-                        }
-                        else
-                        {
-                            formatinfo(ref Temp, item, "40F");
-                            TodayDutyinfo.Add(Temp);
+                            rest_index = i;
+                            break;
                         }
                     }
-                    else if (item.Item4 - 1 < 1)
+                    foreach (var r in rule.Item2)
                     {
-                        if (!dataTable.Rows[item.Item3][item.Item4 + 1].ToString().Contains('白'))
-                        {
-                            formatinfo(ref Temp, item, "40F");
-                            TodayDutyinfo.Add(Temp);
-                        }
-                        else
-                        {
-                            formatinfo(ref Temp, item, "15F");
-                            TodayDutyinfo.Insert(0, Temp);
-                        }
-                    }
-                    else
-                    {
-                        if (!dataTable.Rows[item.Item3][item.Item4 + 1].ToString().Contains('白'))
-                        {
-                            formatinfo(ref Temp, item, "40F");
-                            TodayDutyinfo.Add(Temp);
-                        }
-                        else
-                        {
-                            formatinfo(ref Temp, item, "15F");
-                            TodayDutyinfo.Insert(0, Temp);
-                        }
+                        istar &= rest_index - select_index == rule.Item1 - r;
                     }
                 }
                 else
                 {
-                    formatinfo(ref Temp, item);
-                    //Temp = string.Format(Temp, DutyInfo.Dutyinfo_dict[item.Item2].icon, tempname, DutyInfo.Dutyinfo_dict[item.Item2].Place, DutyInfo.Dutyinfo_dict[item.Item2].Timeslot, Nameformat(item.Item1), DutyInfo.link_dict[item.Item1]);
-                    TodayDutyinfo.Add(Temp);
+                    for (int i = select_index; i > 0; i--)
+                    {
+                        if (table.Rows[item.Item3][i].ToString() == rule.Item6)
+                        {
+                            rest_index = i;
+                            break;
+                        }
+                    }
+                    foreach (var r in rule.Item2)
+                    {
+                        istar &= select_index - rest_index == r;
+                    }
+                }
+                bool isMask = false;
+                for (int s = 0; s < rule.Item3.Length; s++)
+                {
+                    isMask |= item.Item2.Contains(rule.Item3[s]);
+                }
+                if (istar && isMask)
+                {
+                    formatinfo(ref Temp, item, rule.Item4);
+                    todayinfos.Insert(0, Temp);
+                }
+                else
+                {
+                    formatinfo(ref Temp, item, rule.Item5);
+                    todayinfos.Add(Temp);
                 }
             }
-            return TodayDutyinfo.ToArray();
+            return todayinfos;
         }
-        public static void formatinfo(ref string temp, Tuple<string, string, int, int> tuple, string location = null)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <param name="tuple"></param>
+        /// <param name="location">位置</param>
+        public static void formatinfo(ref string temp, Per_Info_OnTable tuple, string location = null)
         {
             if (null != location)
-                temp = string.Format(temp, DutyInfo.Dutyinfo_dict[tuple.Item2].icon, ProcessDutyName(tuple.Item2), location, DutyInfo.Dutyinfo_dict[tuple.Item2].Timeslot, Nameformat(tuple.Item1), DutyInfo.link_dict[tuple.Item1]);
+                temp = string.Format(temp, DutyInfo.Dutyinfo_dict[tuple.Item2].icon, tuple.Item2, location, DutyInfo.Dutyinfo_dict[tuple.Item2].Timeslot, Nameformat(tuple.Item1), DutyInfo.link_dict[tuple.Item1]);
             else
-                temp = string.Format(temp, DutyInfo.Dutyinfo_dict[tuple.Item2].icon, ProcessDutyName(tuple.Item2), DutyInfo.Dutyinfo_dict[tuple.Item2].Place, DutyInfo.Dutyinfo_dict[tuple.Item2].Timeslot, Nameformat(tuple.Item1), DutyInfo.link_dict[tuple.Item1]);
+                temp = string.Format(temp, DutyInfo.Dutyinfo_dict[tuple.Item2].icon, tuple.Item2, DutyInfo.Dutyinfo_dict[tuple.Item2].Place, DutyInfo.Dutyinfo_dict[tuple.Item2].Timeslot, Nameformat(tuple.Item1), DutyInfo.link_dict[tuple.Item1]);
         }
-        public static void Sortdyty(DataTable table, ref List<Tuple<string, string, int, int>> tuples)
+        /// <summary>
+        /// 排序
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="tuples"></param>
+        public static void Sortdyty(DataTable table, ref List<Per_Info_OnTable> tuples)
         {
-            List<Tuple<string, string, int, int>> tuple_duty = new List<Tuple<string, string, int, int>>();
+            List<Per_Info_OnTable> tuple_duty = new();
             foreach (var item in tuples)
             {
                 if (item.Item2.Contains('白'))
                     tuple_duty.Insert(0, item);
                 else tuple_duty.Add(item);
-
             }
             tuples = tuple_duty;
+
         }
+        /// <summary>
+        /// 姓名格式化
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
         public static string Nameformat(string Name)
         {
             if (Name.Length == 2)
             {
-                Name = Name[0] + "  " +Name[1];
+                Name = Name[0] + "  " + Name[1];
             }
             return Name;
         }

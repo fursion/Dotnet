@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fursion/Dotnet/Dotnet/WebServer/WebServer.csproj": {}
+    "/home/fursion/development/Dotnet/WebServer/WebServer.csproj": {}
   },
   "projects": {
-    "/Users/fursion/Dotnet/Dotnet/WebServer/WebServer.csproj": {
+    "/home/fursion/development/Dotnet/WebServer/WebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fursion/Dotnet/Dotnet/WebServer/WebServer.csproj",
+        "projectUniqueName": "/home/fursion/development/Dotnet/WebServer/WebServer.csproj",
         "projectName": "WebServer",
-        "projectPath": "/Users/fursion/Dotnet/Dotnet/WebServer/WebServer.csproj",
-        "packagesPath": "/Users/fursion/.nuget/packages/",
-        "outputPath": "/Users/fursion/Dotnet/Dotnet/WebServer/obj/",
+        "projectPath": "/home/fursion/development/Dotnet/WebServer/WebServer.csproj",
+        "packagesPath": "/home/fursion/.nuget/packages/",
+        "outputPath": "/home/fursion/development/Dotnet/WebServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/fursion/.nuget/NuGet/NuGet.Config"
+          "/home/fursion/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

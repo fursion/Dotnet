@@ -30,6 +30,8 @@ namespace AutoDutyInfo
             textBox_result.Clear();
             DutyInfo.Init();
             DataTable table = ExcelTools.ReadExcel(System.Configuration.ConfigurationManager.AppSettings["班表"], "IFS班表", true);
+
+
             textBox_result.NewLine(DutyInfo.Templatedict["班次表头"]);
             var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, dateTimePicker1.Value);
             foreach (var item in TodayDutyinfo)
