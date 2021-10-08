@@ -1,16 +1,31 @@
 ﻿using System;
+using System.IO;
 using QRCoder;
 using System.Drawing;
 namespace QRCode
 {
     public static class CreateQRCode
     {
-        public static void Create(string text)
+        public static Bitmap Create(string text)
         {
             QRCodeGenerator qRCodeGenerator = new();
             QRCodeData qRCodeData = qRCodeGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+            QRCoder.BitmapByteQRCode qRCode = new QRCoder.BitmapByteQRCode(qRCodeData);
+            byte[] qrbitmap = qRCode.GetGraphic(20);
+            Bitmap bitmap;
+            using (var ms = new MemoryStream(qrbitmap))
+            {
+                bitmap = new Bitmap(ms);
+            }
+            return bitmap;
+        }
+        public static Bitmap Create(string content, Bitmap log)
+        {
+            QRCodeGenerator qRCodeGenerator = new();
+            QRCodeData qRCodeData = qRCodeGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
             QRCoder.QRCode qRCode = new QRCoder.QRCode(qRCodeData);
-            Bitmap qrbitmap = qRCode.GetGraphic(20);
+            Bitmap bitmap = qRCode.GetGraphic(20, "#000ff0", "#0ff000");
+            return bitmap;
         }
     }
 }
