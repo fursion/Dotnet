@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0+eyWbE1gGeh0gqdrt0tRNuoVKveW3fKxOMz+2nlEqmbAkm8zeU46eGERYsM6u7WTs/APf6Dwfd2WTmFMjfvMw==",
+  "dgSpecHash": "0KCF+D5a27zIx5CTHM8QWQAvlEd1WRgXrrXItixxGaGxeTN1ZSrveCkVS75Z6yVQVd6n/C9b//fYa4nlED9ufw==",
   "success": true,
   "projectFilePath": "/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/QRCode.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/fursion/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/qrcoder/1.4.1/qrcoder.1.4.1.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
