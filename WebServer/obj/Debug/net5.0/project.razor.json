@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/fursion/development/Dotnet/WebServer/WebServer.csproj",
+  "FilePath": "/Users/fursion/Dotnet/Dotnet/WebServer/WebServer.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15617,42 +15617,6 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "WebServer",
-  "Documents": [
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/DutyInfo/GetInfo.cshtml",
-      "TargetPath": "Views\\DutyInfo\\GetInfo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/HelloWorld/Index.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/DutyInfo/Index.cshtml",
-      "TargetPath": "Views\\DutyInfo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fursion/development/Dotnet/WebServer/Views/HelloWorld/Welcome.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "Documents": [],
   "SerializationFormat": "0.2"
 }
