@@ -1,0 +1,12 @@
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/bin/Debug/net5.0/QRCode.deps.json
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/bin/Debug/net5.0/QRCode.dll
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/bin/Debug/net5.0/ref/QRCode.dll
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/bin/Debug/net5.0/QRCode.pdb
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.csproj.AssemblyReference.cache
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.AssemblyInfoInputs.cache
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.AssemblyInfo.cs
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.csproj.CoreCompileInputs.cache
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.dll
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/ref/QRCode.dll
+/Users/fursion/Dotnet/Dotnet/QRCode/QRCode/obj/Debug/net5.0/QRCode.pdb
