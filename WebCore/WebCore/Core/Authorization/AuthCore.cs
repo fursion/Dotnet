@@ -23,11 +23,17 @@ namespace WebCore.Core.Authorization
 
         }
         /// <summary>
-        /// 核对
+        /// 核对Token
         /// </summary>
         private static void Atuth_Verify_Token()
         {
 
         }
+        private static void CreateToken() {
+
+
+
+        }
+
     }
 }

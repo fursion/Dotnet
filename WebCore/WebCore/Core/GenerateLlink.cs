@@ -1,10 +1,12 @@
-﻿using System;
+﻿/*
+ * 链接生产工具
+ * 
+ */
+using System;
 namespace WebCore.Core
 {
-    public class GenerateLlink
+    public static class GenerateLlink
     {
-        public GenerateLlink()
-        {
-        }
+        
     }
 }

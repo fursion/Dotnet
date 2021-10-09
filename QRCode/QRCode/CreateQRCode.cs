@@ -27,5 +27,13 @@ namespace QRCode
             Bitmap bitmap = qRCode.GetGraphic(20, "#000ff0", "#0ff000");
             return bitmap;
         }
+        public static byte[] CreateByteMap(string content)
+        {
+            QRCodeGenerator qRCodeGenerator = new();
+            QRCodeData qRCodeData = qRCodeGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
+            QRCoder.BitmapByteQRCode bitmapByteQRCode=new BitmapByteQRCode(qRCodeData);
+            byte[] bitmap=bitmapByteQRCode.GetGraphic(20);
+            return bitmap;
+        }
     }
 }

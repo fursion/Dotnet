@@ -1,0 +1,38 @@
+﻿.QRCode {
+    box-shadow: 15px 15px 15px #888888;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.QRCode_text_test {
+    box-shadow: 15px 15px 15px #888888;
+    background-image: linear-gradient(to right,#b92b27,#1565c0);
+    width: 150px;
+    height: 30px;
+}
+
+.QRCode_selder {
+    background-color: #dddddd;
+    box-shadow: 15px 15px 15px #888888;
+    background-image: linear-gradient(to right,#b92b27,#1565c0);
+    width: 150px;
+    height: 180px;
+}
+
+.info-card {
+    background-color: #f0fcff;
+    width: 130px;
+    text-align: center;
+}
+.info-card-image{
+    width:100%;
+}
+
+.info-card-textarea {
+    padding:10px;
+}
+.fillet{
+    border-radius:5px;
+    border-bottom:0.5px solid #e5e5e5;
+}

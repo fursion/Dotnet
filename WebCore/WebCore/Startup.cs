@@ -28,6 +28,7 @@ namespace WebCore
         {
            // services.AddAuthentication().AddOAuth
             services.AddControllers();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebCore", Version = "v1" });
@@ -43,7 +44,11 @@ namespace WebCore
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebCore v1"));
             }
-
+            DefaultFilesOptions defaultFilesOptions = new();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(defaultFilesOptions);
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -51,6 +56,9 @@ namespace WebCore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=index}/{id?}");
             });
         }
     }

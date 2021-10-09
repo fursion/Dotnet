@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,17 @@ namespace WebCore.Core.Authorization
         {
             return CreateQRCode.Create("http://web.fursion.cn/dutyinfo/Getinfo");
         }
+        [Authorize(Roles ="admin")]
         [HttpGet]
         [Route("qrcode")]
-        public Bitmap GetAccess_token_QRCode()
+        public Byte[] GetAccess_token_QRCode()
         {
-            return CreateQRCode.Create("http://web.fursion.cn/dutyinfo/Getinfo");
+            return CreateQRCode.CreateByteMap("http://web.fursion.cn/dutyinfo/Getinfo");
+        }
+        [HttpPost]
+        public IActionResult Page(int id)
+        {
+            return View();
         }
     }
 }

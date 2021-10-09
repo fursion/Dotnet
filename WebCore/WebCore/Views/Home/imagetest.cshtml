@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "API1.0";
+}
+<head>
+    <link rel="stylesheet" href="/css/WebCoreCSS.css" />
+</head>
+<body>
+    <div class="QRCode_selder">
+        <img class="QRCode" draggable="false" src="@Url.Action("Generate")" />
+        <textarea class="QRCode_text_test"></textarea>
+    </div>
+    <div class="info-card fillet">
+        <img draggable="false" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180520%2F0473e00bdfd2476fbe0c228a45a1652c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636362999&t=082869fa01c02eab86b8eb8d446692e7" class="info-card-image" />
+        <div class="info-card-textarea">
+            <p>hello world!</p>
+        </div>
+    </div>
+</body>

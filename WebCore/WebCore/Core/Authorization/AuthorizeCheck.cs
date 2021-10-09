@@ -1,10 +1,16 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Filters;
+
 namespace WebCore.Core.Authorization
 {
-    public class AuthorizeCheck
+    public class AuthorizeCheck : ActionFilterAttribute
     {
-        public AuthorizeCheck()
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
+            base.OnActionExecuting(context);
+            //foreach(var item in )
+            var _request = context.Filters;
         }
     }
 }

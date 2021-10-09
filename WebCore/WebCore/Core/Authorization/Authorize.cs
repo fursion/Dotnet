@@ -1,10 +1,12 @@
 ﻿using System;
-namespace WebCore.Core.Authorization
+namespace WebCore.Core.SQL
 {
-    public class Authorize
+    public class Authorize:Attribute
     {
-        public Authorize()
+        public int PermissionLevel { get; set; }
+        public Authorize(int PermissionLevel)
         {
+            this.PermissionLevel = PermissionLevel;
         }
     }
 }
