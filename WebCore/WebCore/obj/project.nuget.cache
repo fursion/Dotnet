@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "1oBDxL+qeO92dPKh8Zy4q2ryjM+X/OnREhlvVJOGgDi08CQUFGun4WnGfmer3QPnhK8fIVq9lDJ3XgjnSzXjGA==",
+  "dgSpecHash": "2x1UKdSvRIwS79Ur03W7BPJmXn3g64nsS13DZfyc6vLejOPBGVehzhgHhx3ErOZLMFt1RAgRy+Lw4Hsr75X5Dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Du\\Documents\\CSharp\\Dotnet\\WebCore\\WebCore\\WebCore.csproj",
+  "projectFilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/WebCore.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Du\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
-    "C:\\Users\\Du\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+    "/Users/fursion/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/qrcoder/1.4.1/qrcoder.1.4.1.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/Users/fursion/.nuget/packages/system.drawing.common/5.0.2/system.drawing.common.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
