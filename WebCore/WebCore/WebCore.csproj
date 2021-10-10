@@ -23,6 +23,9 @@
     <Folder Include="Core\Protobuf\" />
     <Folder Include="Mouds\" />
     <Folder Include="Core\UserManage\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="wwwroot\css\Blog\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,10 +43,13 @@
     <None Remove="Core\Protobuf\" />
     <None Remove="Mouds\" />
     <None Remove="Core\UserManage\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\image\" />
     <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\css\Blog\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "博客";
+    Layout = "_Layout";
+}
+
+<head>
+    <title>@ViewData["title"] -首页</title>
+    <link rel="stylesheet" href="css/Blog/BlogCSS.css">
+</head>
+
+<body>
+    <div class="blog-html-body">
+        <div class="sidebar show-border-left"></div>
+        <div class="blog-html-boty-content">text</div>
+        <div class="sidebar show-border-right">
+            <div class="info-card fillet">
+                <img draggable="false" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180520%2F0473e00bdfd2476fbe0c228a45a1652c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636362999&t=082869fa01c02eab86b8eb8d446692e7" class="info-card-image" />
+                <div class="info-card-textarea">
+                    <p>hello world!</p>
+                </div>
+            </div>
+            @{
+                for (int i = 0; i < 5; i++)
+                {
+                    <div class="info-card fillet">
+                        <img draggable="false" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180520%2F0473e00bdfd2476fbe0c228a45a1652c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636362999&t=082869fa01c02eab86b8eb8d446692e7" class="info-card-image" />
+                        <div class="info-card-textarea">
+                            <p>hello world!</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+
+    </div>
+
+</body>

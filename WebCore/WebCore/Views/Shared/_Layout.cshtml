@@ -1,13 +1,36 @@
 ﻿<!DOCTYPE html>
 
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
+
 <body>
-    <div>
+    <header>
+        <div class="blog-top-bar top-nav-bar">
+            <div class="show-border sub-div-show text-center">
+                WebCore
+            </div>
+            <div class="show-border sub-div-show">
+
+            </div>
+            <div class="show-border sub-div-show">
+
+            </div>
+        </div>
+
+    </header><!-- 头部-->
+    <div>    
         @RenderBody()
     </div>
+    <footer class="footer-bar footer-div">
+        <div class="footer-tag">
+            &copy;@DateTime.Now.Year - WebCore by fursion
+        </div>
+    </footer>
+    <!--尾部-->
 </body>
+
 </html>

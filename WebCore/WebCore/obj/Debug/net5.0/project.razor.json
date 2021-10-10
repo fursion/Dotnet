@@ -15619,6 +15619,11 @@
   "RootNamespace": "WebCore",
   "Documents": [
     {
+      "FilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -15626,6 +15631,16 @@
     {
       "FilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Authorization/page.cshtml",
       "TargetPath": "Views\\Authorization\\page.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Blog/Index.cshtml",
+      "TargetPath": "Views\\Blog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {

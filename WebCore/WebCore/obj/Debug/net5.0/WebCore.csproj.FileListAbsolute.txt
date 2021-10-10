@@ -112,7 +112,6 @@ C:/Users/Du/Documents/CSharp/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCoder.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCode.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCode.pdb
-/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.csproj.AssemblyReference.cache
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.GeneratedMSBuildEditorConfig.editorconfig
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.AssemblyInfoInputs.cache
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.AssemblyInfo.cs
@@ -128,8 +127,11 @@ C:/Users/Du/Documents/CSharp/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCoder.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.TagHelpers.output.cache
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.RazorCoreGenerate.cache
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/Authorization/page.cshtml.g.cs
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/Blog/Index.cshtml.g.cs
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/Home/imagetest.cshtml.g.cs
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.RazorTargetAssemblyInfo.cache
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.RazorTargetAssemblyInfo.cs
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.Views.pdb
@@ -138,3 +140,4 @@ C:/Users/Du/Documents/CSharp/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCoder.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/ref/WebCore.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.pdb
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.genruntimeconfig.cache
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/Debug/net5.0/WebCore.csproj.AssemblyReference.cache

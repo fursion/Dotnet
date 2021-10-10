@@ -1,0 +1,95 @@
+﻿body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.show-border {
+    border: 1px solid greenyellow;
+}
+
+.sub-div-show {
+    height: 100%;
+    width: 100px;
+    float: left;
+}
+
+.blog-top-bar {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.top-nav-bar {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.footer-bar {
+    background-color: white;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-div {
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.text-center {
+    line-height: 30px;
+    text-align: center;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.sidebar {
+    background-color: whitesmoke;
+    width: 15%;
+    height: 100%;
+}
+
+.show-border-left {
+    float: left;
+}
+
+.show-border-right {
+    float: right;
+}
+
+.blog-html-body {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height:auto;
+    margin: 0 auto 0 auto;
+}
+
+.blog-html-boty-content {
+    line-height: 100%;
+    text-align: center;
+    background-color:beige;
+    width: 100%;
+}
+.info-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f0fcff;
+    width: 100%;
+    text-align: center;
+}
+.info-card-image{
+    width:100%;
+}
+
+.info-card-textarea {
+    padding:10px;
+}
+.fillet{
+    border-radius:5px;
+    border-bottom:0.5px solid #e5e5e5;
+}
+
