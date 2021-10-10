@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{C4CA8AFD-0BEC-447E-82E5-FA4137C1D6E1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Mouds/Request.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/wwwroot/css/WebCoreCSS.css">
     <Files>
       <File FileName="WebCore/Core/Authorization/AuthController.cs" Line="12" Column="20" />
       <File FileName="WebCore/Controllers/HomeController.cs" Line="24" Column="10" />
       <File FileName="WebCore/Program.cs" Line="17" Column="1" />
       <File FileName="WebCore/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
       <File FileName="WebCore/Startup.cs" Line="56" Column="42" />
-      <File FileName="WebCore/Views/Home/imagetext.cshtml" Line="15" Column="8" />
+      <File FileName="WebCore/Views/Home/imagetext.cshtml" Line="11" Column="32" />
+      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" Line="11" Column="18" />
       <File FileName="WebCore/Core/Authorization/AuthCore.cs" Line="34" Column="1" />
-      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" Line="8" Column="23" />
       <File FileName="WebCore/Mouds/Request.cs" Line="6" Column="1" />
+      <File FileName="WebCore/Views/Home/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,19 +19,15 @@
             <Node name="WebCore" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Core" expanded="True">
-                <Node name="Authorization" expanded="True" />
-                <Node name="SQL" expanded="True" />
-                <Node name="UserManage" expanded="True" />
-              </Node>
-              <Node name="Mouds" expanded="True">
-                <Node name="Request.cs" selected="True" />
-              </Node>
+              <Node name="Core" expanded="True" />
+              <Node name="Mouds" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+                <Node name="css" expanded="True">
+                  <Node name="WebCoreCSS.css" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
