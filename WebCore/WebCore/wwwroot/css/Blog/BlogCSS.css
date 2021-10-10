@@ -19,6 +19,8 @@
     height: 30px;
     margin: auto;
     text-align: center;
+    background-color:white;
+    position: fixed;
 }
 
 .top-nav-bar {
