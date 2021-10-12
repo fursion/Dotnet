@@ -15,5 +15,9 @@ namespace WebCore.Controllers
         {
             return View();
         }
+        public IActionResult Blog_Manage()
+        {
+            return View();
+        }
     }
 }

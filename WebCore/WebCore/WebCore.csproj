@@ -9,6 +9,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
     <PackageReference Include="Google.Protobuf" Version="3.18.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.26" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
     <Folder Include="Views\Blog\" />
     <Folder Include="wwwroot\css\Blog\" />
     <Folder Include="Views\Shared\" />
+    <Folder Include="Core\WebAPI\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +47,8 @@
     <None Remove="Core\UserManage\" />
     <None Remove="Views\Blog\" />
     <None Remove="Views\Shared\" />
+    <None Remove="MySql.Data" />
+    <None Remove="Core\WebAPI\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

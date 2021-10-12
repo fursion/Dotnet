@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{C4CA8AFD-0BEC-447E-82E5-FA4137C1D6E1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Views/Blog/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Controllers/HomeController.cs">
     <Files>
       <File FileName="WebCore/Core/Authorization/AuthController.cs" Line="12" Column="20" />
-      <File FileName="WebCore/Controllers/HomeController.cs" />
-      <File FileName="WebCore/Program.cs" />
-      <File FileName="WebCore/Controllers/WeatherForecastController.cs" />
-      <File FileName="WebCore/Startup.cs" />
-      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" />
-      <File FileName="WebCore/Core/Authorization/AuthCore.cs" />
-      <File FileName="WebCore/Mouds/Request.cs" />
-      <File FileName="WebCore/Views/Home/Index.cshtml" />
-      <File FileName="WebCore/Controllers/BlogController.cs" />
-      <File FileName="WebCore/Views/Blog/Index.cshtml" Line="17" Column="55" />
+      <File FileName="WebCore/Controllers/HomeController.cs" Line="28" Column="40" />
+      <File FileName="WebCore/Views/Home/imagetest.cshtml" Line="12" Column="76" />
+      <File FileName="WebCore/Program.cs" Line="17" Column="1" />
+      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" Line="1" Column="1" />
+      <File FileName="WebCore/Controllers/BlogController.cs" Line="21" Column="10" />
+      <File FileName="WebCore/Views/Blog/Index.cshtml" Line="38" Column="18" />
       <File FileName="WebCore/wwwroot/css/Blog/BlogCSS.css" />
       <File FileName="WebCore/Views/_ViewImports.cshtml" />
-      <File FileName="WebCore/Views/Shared/_Layout.cshtml" />
+      <File FileName="WebCore/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="WebCore/Core/SQL/IO.cs" Line="11" Column="1" />
+      <File FileName="WebCore/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="WebCore/Core/WebAPI/QRCodeController.cs" Line="47" Column="30" />
+      <File FileName="../QRCode/QRCode/CreateQRCode.cs" Line="33" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,15 +22,17 @@
           <Node name="WebCore" expanded="True">
             <Node name="WebCore" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
               <Node name="Core" expanded="True">
                 <Node name="Authorization" expanded="True" />
+                <Node name="WebAPI" expanded="True" />
               </Node>
               <Node name="Mouds" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Blog" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="Blog" expanded="True" />
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">

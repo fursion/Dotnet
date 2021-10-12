@@ -12,15 +12,19 @@
     width: 100px;
     float: left;
 }
-
+.blog-top-status{
+    background-color: cadetblue;
+    height: 100%;
+    width: 300px;
+    float: right;
+}
 .blog-top-bar {
     display: flex;
     width: 100%;
-    height: 30px;
+    height: 100px;
     margin: auto;
     text-align: center;
     background-color:white;
-    position: fixed;
 }
 
 .top-nav-bar {
@@ -71,11 +75,15 @@
     margin: 0 auto 0 auto;
 }
 
-.blog-html-boty-content {
+.blog-html-body-content {
     line-height: 100%;
     text-align: center;
-    background-color:beige;
+    background-color:white;
     width: 100%;
+}
+.blog-html-body-html{
+    width: 100%;
+    height: 100%;
 }
 .info-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
