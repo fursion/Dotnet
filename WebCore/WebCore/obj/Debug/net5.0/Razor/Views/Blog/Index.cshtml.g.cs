@@ -12,8 +12,29 @@ namespace WebCore.Views.Blog
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore.Controllers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore.Mouds;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f89a19e9bda7cb3bb1709ed82e7a1e8d0e34fc1a", @"/Views/Blog/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a295932620ca6423489bce5ce010beceb8393b55", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2f8ab107e337c180609a0325a3bb7618d05d7bff", @"/Views/_ViewImports.cshtml")]
     public class Views_Blog_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -51,7 +72,7 @@ namespace WebCore.Views.Blog
 #line hidden
 #nullable disable
             WriteLiteral("\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f89a19e9bda7cb3bb1709ed82e7a1e8d0e34fc1a3005", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f89a19e9bda7cb3bb1709ed82e7a1e8d0e34fc1a3503", async() => {
                 WriteLiteral("\n    <title>");
 #nullable restore
 #line 10 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Blog/Index.cshtml"
@@ -73,7 +94,7 @@ namespace WebCore.Views.Blog
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f89a19e9bda7cb3bb1709ed82e7a1e8d0e34fc1a4251", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f89a19e9bda7cb3bb1709ed82e7a1e8d0e34fc1a4749", async() => {
                 WriteLiteral(@"
     <div class=""blog-html-body"">
         <div class=""sidebar show-border-left"" id=""menu"">

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using WebCore.Core.UserManage;
+using WebCore.Mouds;
 using WebCore.Core.WebAPI;
+using Microsoft.AspNetCore.Http;
 //using WebCore.Core;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -33,6 +35,17 @@ namespace WebCore.Controllers
             var guid = UserManage.CreateUUID();
             return File(QRCode.CreateQRCode.CreateByteMap(content), "image/jpeg");
         }
+        public IActionResult text()
+        {
+            return View("imagetest");
+        }
 
+        [HttpPost]
+        public IActionResult text(TextViewModel model)
+        {
+            string str = model.inputText1;
+            ViewBag.image=Url.Action("Generate", "QRCOde", new { content = str });
+            return View("imagetest");
+        }
     }
 }

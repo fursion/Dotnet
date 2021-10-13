@@ -1036,7 +1036,7 @@
       "outputPath": "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/fursion/.config/NuGet/NuGet.Config"
+        "/Users/fursion/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1099,7 +1099,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

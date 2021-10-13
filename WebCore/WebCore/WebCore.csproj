@@ -22,7 +22,7 @@
     <Folder Include="Core\SQL\" />
     <Folder Include="Views\Authorization\" />
     <Folder Include="Core\Protobuf\" />
-    <Folder Include="Mouds\" />
+    <Folder Include="Models\" />
     <Folder Include="Core\UserManage\" />
     <Folder Include="Views\Blog\" />
     <Folder Include="wwwroot\css\Blog\" />

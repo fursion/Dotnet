@@ -12,8 +12,29 @@ namespace WebCore.Views.Shared
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore.Controllers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/_ViewImports.cshtml"
+using WebCore.Mouds;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5e18148f76f14affcaee55a1018f52257d01eefd", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a295932620ca6423489bce5ce010beceb8393b55", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2f8ab107e337c180609a0325a3bb7618d05d7bff", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -42,7 +63,7 @@ namespace WebCore.Views.Shared
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\n\n<html>\n\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e18148f76f14affcaee55a1018f52257d01eefd2856", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e18148f76f14affcaee55a1018f52257d01eefd3354", async() => {
                 WriteLiteral("\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    <title>");
 #nullable restore
 #line 7 "/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Views/Shared/_Layout.cshtml"
@@ -64,7 +85,7 @@ namespace WebCore.Views.Shared
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e18148f76f14affcaee55a1018f52257d01eefd4099", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e18148f76f14affcaee55a1018f52257d01eefd4597", async() => {
                 WriteLiteral(@"
     <header>
         <div class=""blog-top-bar top-nav-bar"">
