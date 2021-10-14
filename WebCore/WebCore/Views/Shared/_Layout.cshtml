@@ -3,7 +3,9 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
 </head>
 
@@ -39,8 +41,10 @@
     <footer class="footer-bar footer-div">
         <div class="footer-tag">
             &copy;@DateTime.Now.Year - WebCore by fursion
-        </div>
+        </div>   
     </footer>
+    <script src="/lib/node_modules/vue/dist/vue.global.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
     <!--尾部-->
 </body>
 
