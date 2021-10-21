@@ -2,16 +2,36 @@
 <html>
 
 <head>
-    <script src="../lib/node_modules/vue/dist/vue.global.js"></script>
+    <script src="../js/vue.global.prod.js"></script>
+    <script src="../js//vuet.js" type="module"></script>
+    <script src="../js/index.full.js"></script>
     <link rel="stylesheet" href="../css/Blog/BlogCSS.css">
+    <link rel="stylesheet" href="../css/ElUIindex.css">
 </head>
 
 <body>
-    <div class="blog-html-body-html show-border">
-        测试
+    <div id="elui" class="blog-html-body-html show-border">
+        <el-button>按钮</el-button>
+    </div>
+    <div id="test">
+        {{message}}
+    </div>
+    <div id="app">
+        <hhh></hhh>
+    </div>
+    <div id="app-mtk" class="show-border">
+        KM: <input type="text" v-model="km">
+        M:<input type="text" v-model="m">
+    </div>
+    <div id="app-select" class="show-border">
+        <select v-model="selected">
+            <option v-for="option in options" :value="option.value">{{option.text}}</option>
+        </select>
+        <span>当前地址：{{selected}}</span>
     </div>
 </body>
 <script>
-    
+    const app_elui={}
+    Vue.createApp(app_elui).use(ElementUI).mount('#app-select')
 </script>
 </html>

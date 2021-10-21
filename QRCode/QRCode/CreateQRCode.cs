@@ -29,11 +29,21 @@ namespace QRCode
         }
         public static byte[] CreateByteMap(string content)
         {
-            QRCodeGenerator qRCodeGenerator = new();
-            QRCodeData qRCodeData = qRCodeGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
-            QRCoder.BitmapByteQRCode bitmapByteQRCode=new BitmapByteQRCode(qRCodeData);
-            byte[] bitmap=bitmapByteQRCode.GetGraphic(20);
-            return bitmap;
+            if (content == null)
+                throw new Exception();
+            try
+            {
+                if (content == null)
+                    throw new Exception();
+                QRCodeData qRCodeData = qRCodeGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
+                QRCoder.BitmapByteQRCode bitmapByteQRCode = new BitmapByteQRCode(qRCodeData);
+                byte[] bitmap = bitmapByteQRCode.GetGraphic(20);
+                return bitmap;
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
         }
     }
 }

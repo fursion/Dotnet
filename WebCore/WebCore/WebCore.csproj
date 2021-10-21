@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="QRCoder" Version="1.4.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
     <PackageReference Include="Google.Protobuf" Version="3.18.1" />
     <PackageReference Include="MySql.Data" Version="8.0.26" />
+    <PackageReference Include="NPOI" Version="2.5.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,16 +19,16 @@
     <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\image\" />
-    <Folder Include="wwwroot\css\" />
     <Folder Include="Core\SQL\" />
     <Folder Include="Views\Authorization\" />
     <Folder Include="Core\Protobuf\" />
     <Folder Include="Models\" />
     <Folder Include="Core\UserManage\" />
     <Folder Include="Views\Blog\" />
-    <Folder Include="wwwroot\css\Blog\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Core\WebAPI\" />
+    <Folder Include="wwwroot\file\" />
+    <Folder Include="wwwroot\TempFile\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,11 +50,25 @@
     <None Remove="Views\Shared\" />
     <None Remove="MySql.Data" />
     <None Remove="Core\WebAPI\" />
+    <None Remove="NPOI" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\image\" />
     <Content Remove="wwwroot\css\" />
     <Content Remove="wwwroot\css\Blog\" />
+    <Content Remove="wwwroot\file\" />
+    <Content Remove="wwwroot\TempFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'" Update="wwwroot\file\DutyInfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'" Update="wwwroot\file\linklist.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'" Update="wwwroot\file\Template.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

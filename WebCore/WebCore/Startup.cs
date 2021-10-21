@@ -33,6 +33,14 @@ namespace WebCore
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebCore", Version = "v1" });
             });
+            services.AddCors(options=>{
+                options.AddPolicy(
+                    "CorsPOlicy",
+                    builder=>{
+                        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    }
+                );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +58,7 @@ namespace WebCore
             app.UseDefaultFiles(defaultFilesOptions);
             app.UseStaticFiles();
             app.UseRouting();
-
+            app.UseCors("CorsPOlicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,48 +1,31 @@
 ﻿<Properties StartupConfiguration="{C4CA8AFD-0BEC-447E-82E5-FA4137C1D6E1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Controllers/DutyInfoController.cs">
     <Files>
       <File FileName="WebCore/Core/Authorization/AuthController.cs" Line="12" Column="20" />
-      <File FileName="WebCore/Controllers/HomeController.cs" Line="48" Column="1" />
-      <File FileName="WebCore/Views/Home/imagetest.cshtml" Line="26" Column="99" />
+      <File FileName="WebCore/Controllers/HomeController.cs" Line="43" Column="19" />
+      <File FileName="WebCore/Views/Home/imagetest.cshtml" Line="26" Column="11" />
       <File FileName="WebCore/Program.cs" Line="17" Column="1" />
-      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" />
-      <File FileName="WebCore/Controllers/BlogController.cs" />
-      <File FileName="WebCore/Views/Blog/Index.cshtml" />
-      <File FileName="WebCore/wwwroot/css/Blog/BlogCSS.css" />
-      <File FileName="WebCore/Views/_ViewImports.cshtml" />
-      <File FileName="WebCore/Views/Shared/_Layout.cshtml" />
-      <File FileName="WebCore/Core/SQL/IO.cs" />
-      <File FileName="WebCore/Controllers/WeatherForecastController.cs" />
-      <File FileName="WebCore/Core/WebAPI/QRCodeController.cs" />
-      <File FileName="../QRCode/QRCode/CreateQRCode.cs" />
+      <File FileName="WebCore/wwwroot/css/WebCoreCSS.css" Line="1" Column="1" />
+      <File FileName="WebCore/Controllers/BlogController.cs" Line="1" Column="1" />
+      <File FileName="WebCore/Views/Blog/Index.cshtml" Line="1" Column="1" />
+      <File FileName="WebCore/wwwroot/css/Blog/BlogCSS.css" Line="1" Column="1" />
+      <File FileName="WebCore/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="WebCore/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="WebCore/Core/SQL/IO.cs" Line="1" Column="1" />
+      <File FileName="WebCore/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="WebCore/Core/WebAPI/QRCodeController.cs" Line="1" Column="1" />
+      <File FileName="../QRCode/QRCode/CreateQRCode.cs" Line="1" Column="1" />
       <File FileName="WebCore/wwwroot/htmls/header.html" Line="1" Column="1" />
+      <File FileName="WebCore/Controllers/DutyInfoController.cs" Line="25" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="WebCore" expanded="True">
-            <Node name="WebCore" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Core" expanded="True">
-                <Node name="Authorization" expanded="True" />
-                <Node name="WebAPI" expanded="True" />
-              </Node>
-              <Node name="Models" expanded="True" selected="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Blog" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="Blog" expanded="True" />
-                </Node>
-                <Node name="htmls" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="WebCore" expanded="True" />
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -50,9 +33,7 @@
   <MonoDevelop.Ide.ItemProperties.WebCore PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/Controllers/HomeController.cs" relfile="WebCore/Controllers/HomeController.cs" line="48" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -38,7 +38,13 @@
             </div>
         </form>
     </div>
+    <div id="vue-test">{{message}}</div>
     <script>
-        
+        var app=new Vue({
+            el:'#vue-test',
+            data:{
+                message:'vue is runing'
+            }
+        })
     </script>
 </body>

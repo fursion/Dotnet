@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebCore.Core.UserManage;
+using WebCore.Mouds;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebCore.Core.WebAPI
@@ -11,43 +12,36 @@ namespace WebCore.Core.WebAPI
     [Route("api/[controller]")]
     public class QRCodeController : Controller
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
         [Route("create")]
         [HttpGet]
         public IActionResult Generate(string content)
         {
-            var guid =UserManage.UserManage.CreateUUID();
             return File(QRCode.CreateQRCode.CreateByteMap(content), "image/jpeg");
+        }
+        [Route("geturl")]
+        [HttpPost]
+        public string GetQRCodeUrl(string content)
+        {
+            return Url.ActionLink("Generate", "QRCode", new { content = content });
+        }
+        [HttpPost]
+        public byte[] GetQRCodeByte(string content)
+        {
+            return QRCode.CreateQRCode.CreateByteMap(content);
+        }
+        [Route("getqrcode")]
+        [HttpGet]
+        public string getqr(QRCodeRequestModel qRCodeRequest)
+        {
+            System.Console.WriteLine(qRCodeRequest.content);
+            var url = Url.ActionLink("Generate", "QRCode", new { content = qRCodeRequest.content });
+            return url;
+        }
+        [Route("GetSiteInfo")]
+        [HttpGet]
+        public string[] GetSiteInfo(){
+            string[] siteinfo=new string[]{"IFS","OCG","WIFC","瑞鑫","华润"};
+            return siteinfo;
         }
     }
 }

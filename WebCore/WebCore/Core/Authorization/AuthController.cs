@@ -18,7 +18,6 @@ namespace WebCore.Core.Authorization
         {
             return CreateQRCode.Create("http://web.fursion.cn/dutyinfo/Getinfo");
         }
-        [Authorize(Roles ="admin")]
         [HttpGet]
         [Route("qrcode")]
         public Byte[] GetAccess_token_QRCode()
@@ -30,5 +29,6 @@ namespace WebCore.Core.Authorization
         {
             return View();
         }
+       
     }
 }
