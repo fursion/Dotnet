@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebCore.Core.Config;
 
 namespace WebCore
 {
@@ -14,7 +15,13 @@ namespace WebCore
     {
         public static void Main(string[] args)
         {
+            ConfigCore.AddConfig<AuthConfig>();
+            ConfigCore.AddConfig<DutyConfig>();
+            ConfigCore.ConfigInit();
+            Console.WriteLine(ConfigCore.GetConfig.GetConfigItem<DutyConfig>("DutyConfig").SavePath);
+            //ConfigCore.GetConfig["DutyConfig"]
             CreateHostBuilder(args).Build().Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

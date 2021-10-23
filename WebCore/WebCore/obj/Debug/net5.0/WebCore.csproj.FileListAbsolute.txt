@@ -159,3 +159,5 @@ C:/Users/Du/Documents/CSharp/Dotnet/WebCore/WebCore/bin/Debug/net5.0/QRCoder.dll
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/wwwroot/file/DutyInfo.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/wwwroot/file/linklist.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/wwwroot/file/Template.json
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/Configs/AuthConfig.json
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Debug/net5.0/Configs/DutyConfig.json

@@ -12,7 +12,7 @@ using System.Data.OleDb;
 using NPOI;
 using NPOI.SS.UserModel;
 using System.Data;
-
+using System.Text.Json;
 namespace WebCore.Core
 {
     using ShiftsRules = ValueTuple<int, int[], string, string, string, string>;//班表规则模板，item1为排班周期，item2为索引，item3为条件值,item4为命中规则的值，item5为默认值

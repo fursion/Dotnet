@@ -29,6 +29,8 @@
     <Folder Include="Core\WebAPI\" />
     <Folder Include="wwwroot\file\" />
     <Folder Include="wwwroot\TempFile\" />
+    <Folder Include="Core\Config\" />
+    <Folder Include="Configs\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +53,8 @@
     <None Remove="MySql.Data" />
     <None Remove="Core\WebAPI\" />
     <None Remove="NPOI" />
+    <None Remove="Core\Config\" />
+    <None Remove="Configs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
