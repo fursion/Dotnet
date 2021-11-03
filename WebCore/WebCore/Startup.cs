@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebCore.Core.Config;
 
 namespace WebCore
 {
@@ -31,7 +32,7 @@ namespace WebCore
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebCore", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebCore", Version = "v1.1" });
             });
             services.AddCors(options=>{
                 options.AddPolicy(
@@ -52,6 +53,7 @@ namespace WebCore
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebCore v1"));
             }
+            ConfigCore.WebRootPath = env.WebRootPath;
             DefaultFilesOptions defaultFilesOptions = new();
             defaultFilesOptions.DefaultFileNames.Clear();
             defaultFilesOptions.DefaultFileNames.Add("index.html");
@@ -60,7 +62,6 @@ namespace WebCore
             app.UseRouting();
             app.UseCors("CorsPOlicy");
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -40,7 +40,7 @@ namespace WebCore.Core.WebAPI
         [Route("GetSiteInfo")]
         [HttpGet]
         public string[] GetSiteInfo(){
-            string[] siteinfo=new string[]{"IFS","OCG","WIFC","瑞鑫","华润"};
+            string[] siteinfo=new string[]{"IFS","瑞鑫时代大厦"};
             return siteinfo;
         }
     }

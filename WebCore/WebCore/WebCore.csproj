@@ -8,9 +8,9 @@
     <PackageReference Include="QRCoder" Version="1.4.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
-    <PackageReference Include="Google.Protobuf" Version="3.18.1" />
-    <PackageReference Include="MySql.Data" Version="8.0.26" />
-    <PackageReference Include="NPOI" Version="2.5.4" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+    <PackageReference Include="NPOI" Version="2.5.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +31,7 @@
     <Folder Include="wwwroot\TempFile\" />
     <Folder Include="Core\Config\" />
     <Folder Include="Configs\" />
+    <Folder Include="wwwroot\TempFile\DutyInfo\瑞鑫时代大厦\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +64,7 @@
     <Content Remove="wwwroot\css\Blog\" />
     <Content Remove="wwwroot\file\" />
     <Content Remove="wwwroot\TempFile\" />
+    <Content Remove="wwwroot\TempFile\DutyInfo\瑞鑫时代大厦\" />
   </ItemGroup>
   <ItemGroup>
     <Content Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'" Update="wwwroot\file\DutyInfo.json">

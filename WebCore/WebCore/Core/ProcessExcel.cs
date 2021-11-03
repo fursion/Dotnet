@@ -117,7 +117,7 @@ namespace WebCore.Core
             {
                 var user = table.Rows[index][0].ToString();//获取人员名字
                 var item = table.Rows[index][day].ToString();//班次信息
-                if (IsMask_Item(item))//剔除掉屏蔽列表中班次
+                if (IsMask_Item(item)||!item.StringEffective())//剔除掉屏蔽列表中班次
                     continue;
                 item = DutyNameformat(item);//班次名称格式化
                 if (DutyInfo.Dutyinfo_dict.ContainsKey(item))
@@ -150,6 +150,24 @@ namespace WebCore.Core
                 return true;
             return false;
         }
+        /// <summary>
+        /// 检验字符串是否有效
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static bool StringEffective(this string str)
+        {
+            if (str == ""||null == str)
+                return false;
+            return true;
+        }
+        /// <summary>
+        /// 生成个人在班信息项
+        /// </summary>
+        /// <param name="dataTable"></param>
+        /// <param name="tuples"></param>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
         public static IEnumerable<string> Createinfo(DataTable dataTable, Today_Per_infos tuples, DateTime dateTime)
         {
             List<string> TodayDutyinfo = new();
@@ -158,17 +176,18 @@ namespace WebCore.Core
             int NowMouthDays = System.Threading.Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(dateTime.Year, dateTime.Month);
             return locationJudge(new ShiftsRules(4, new int[] { 2 }, "白", "15F", "40F", "休"), dataTable, tuples, dateTime.Day, NowMouthDays);
         }
-
-        /*
-         * 
-         * 判断规则模板化
-         */
         /// <summary>
-        /// 值班地点判断
-        /// <param name="dutyCycle"/>排班周期</param>
+        /// 判断值班地点，并写入样式
         /// </summary>
+        /// <param name="rule"></param>
+        /// <param name="table"></param>
+        /// <param name="infos"></param>
+        /// <param name="select_index"></param>
+        /// <param name="days"></param>
+        /// <returns></returns>
         private static List<string> locationJudge(ShiftsRules rule, DataTable table, Today_Per_infos infos, int select_index, int days)
         {
+
             List<string> todayinfos = new();
             foreach (var item in infos)
             {
@@ -224,7 +243,7 @@ namespace WebCore.Core
             return todayinfos;
         }
         /// <summary>
-        /// 
+        /// 格式化填充信息
         /// </summary>
         /// <param name="temp"></param>
         /// <param name="tuple"></param>

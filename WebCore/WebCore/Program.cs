@@ -17,9 +17,8 @@ namespace WebCore
         {
             ConfigCore.AddConfig<AuthConfig>();
             ConfigCore.AddConfig<DutyConfig>();
-            ConfigCore.ConfigInit();
-            Console.WriteLine(ConfigCore.GetConfig.GetConfigItem<DutyConfig>("DutyConfig").SavePath);
-            //ConfigCore.GetConfig["DutyConfig"]
+            ConfigCore.ConfigInit().Wait();
+            Console.WriteLine(ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath);
             CreateHostBuilder(args).Build().Run();
 
         }

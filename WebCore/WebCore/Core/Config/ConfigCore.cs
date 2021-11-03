@@ -9,14 +9,31 @@ namespace WebCore.Core.Config
     public abstract class IConfig { }
     public static class ConfigCore
     {
+        private static bool IsInit = false;
+        public static Task InitTask;
+        /// <summary>
+        /// wwwroot文件夹目录
+        /// </summary>
+        public static string WebRootPath { get; set; }
+        public static string TempFilePath { get { return Path.Combine(WebRootPath, "TempFile"); } }
+        /// <summary>
+        /// 程序工作目录
+        /// </summary>
+        public static string WebCorePath { get; set; } = System.IO.Directory.GetCurrentDirectory();
         public static readonly string ConfigPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Configs");
         private static List<Type> ServiceConfig { get; set; } = new List<Type>();
         public static Dictionary<string, IConfig> GetConfig { get; set; } = new();
         /// <summary>
         /// 配置文件初始化
         /// </summary>
-        public static async void ConfigInit()
+        public static async Task ConfigInit()
         {
+            await LoadingConfigAsync();
+            IsInit = true;
+        }
+        public static async Task LoadingConfigAsync()
+        {
+
             foreach (var config in ServiceConfig)
             {
                 Console.WriteLine($"ServiceName:{config.Name}");
@@ -31,9 +48,10 @@ namespace WebCore.Core.Config
                 {
                     Console.WriteLine(e.Message);
                 }
-
             }
+
         }
+
         public static async Task<string> LoadingJsonfile(string path)
         {
             if (File.Exists(path))
@@ -47,13 +65,30 @@ namespace WebCore.Core.Config
         {
             ServiceConfig.Add(typeof(T));
         }
-        public static T GetConfigItem<T>(this Dictionary<string, IConfig> valuePairs, string ConfigName) where T : IConfig
+        public static T GetConfigItem<T>(string ConfigName) where T : IConfig
         {
-            if (valuePairs.ContainsKey(ConfigName))
+            try
             {
-                return valuePairs[ConfigName] as T;
+                if (GetConfig.ContainsKey(ConfigName))
+                {
+                    return GetConfig[ConfigName] as T;
+                }
+                return null;
             }
-            throw new Exception($"No find {ConfigName}");
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                return null;
+            }
+
+        }
+        /// <summary>
+		/// 刷新配置文件
+		/// </summary>
+        public static void Refresh()
+        {
+            ConfigInit().Wait();
         }
 
     }

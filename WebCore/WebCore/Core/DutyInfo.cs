@@ -16,21 +16,21 @@ namespace WebCore.Core
     }
     public static class DutyInfo
     {
-        public static string path = "/file/";
         public static Dictionary<string, string> link_dict;
         public static Dictionary<string, string> Templatedict;
         public static Dictionary<string, Dutyinfos> Dutyinfo_dict;
-        public static void Init(string rootpath="")
+        public static void Init(string folderpath)
         {
-            Read_Dutyinfo_Dict(rootpath);
-            Read_Linkinfo_Dict(rootpath);
-            Read_Templatedict(rootpath);
+            IO.CheckPath(folderpath, true);
+            Read_Dutyinfo_Dict(folderpath);
+            Read_Linkinfo_Dict(folderpath);
+            Read_Templatedict(folderpath);
         }
-        public static void Read_Linkinfo_Dict(string rootpath="")
+        public static void Read_Linkinfo_Dict(string rootpath)
         {
             try
             {
-                var linkinfo = File.ReadAllText(pathformat(rootpath, path, "linklist.json"));
+                var linkinfo = File.ReadAllText(Path.Combine(rootpath, "linklist.json"));
                 link_dict = JsonSerializer.Deserialize<Dictionary<string, string>>(linkinfo);
             }
             catch (Exception ex)
@@ -38,11 +38,11 @@ namespace WebCore.Core
                 System.Console.WriteLine(ex.Message);
             }
         }
-        public static void Read_Dutyinfo_Dict(string rootpath = "")
+        public static void Read_Dutyinfo_Dict(string rootpath)
         {
             try
             {
-                var Dutyinfo = File.ReadAllText(pathformat(rootpath, path, "DutyInfo.json"));
+                var Dutyinfo = File.ReadAllText(Path.Combine(rootpath, "DutyInfo.json"));
                 Dutyinfo_dict = JsonSerializer.Deserialize<Dictionary<string, Dutyinfos>>(Dutyinfo);
             }
             catch (Exception ex)
@@ -51,21 +51,17 @@ namespace WebCore.Core
             }
 
         }
-        public static void Read_Templatedict(string rootpath = "")
+        public static void Read_Templatedict(string rootpath)
         {
             try
             {
-                var Templateinfo = File.ReadAllText(pathformat(rootpath,path, "Template.json"));
+                var Templateinfo = File.ReadAllText(Path.Combine(rootpath, "Template.json"));
                 Templatedict = JsonSerializer.Deserialize<Dictionary<string, string>>(@Templateinfo);
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
             }
-        }
-        public static string pathformat(string str1,string str2,string str3)
-        {
-            return str1 + str2+str3;
         }
     }
     [Serializable]

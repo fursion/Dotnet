@@ -8,7 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 using System.IO;
+using System.Text.Json;
 using WebCore.Core;
+using WebCore.Core.Config;
 using WebCore.Models;
 
 namespace WebCore.Controllers
@@ -24,33 +26,87 @@ namespace WebCore.Controllers
         }
         [Route("GetInfo")]
         [HttpPost]
-        public List<string> Getinfo(PersonOnDutyInfoModel model)
+        public PersonOnDutyInfoModel Getinfo(PersonOnDutyInfoModel model)
         {
             List<string> datainfo = new List<string>();
-            var dutyfile_path = string.Format("/file/{0}duty.xlsx",model.Location);
-            string str = _he.ContentRootPath + dutyfile_path;
-            DutyInfo.Init(_he.ContentRootPath);
-            DataTable table = ExcelTools.ReadExcel(str, "IFS班表", true);
-            string temph = _he.ContentRootPath + "/file/TempHeader.txt";
-            string tempend = _he.ContentRootPath + "/file/TempEnd.txt";
-            if (System.IO.File.Exists(temph))
+            //1.核对对应的配置文件是否齐全
+            //2.读对应的文件和班表。
+            //3.生成在班信息表
+            //4.回复客户端
+            var pathlist = new List<string>();
+            string ps = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TemplatePath);
+            string temphs = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TempHeader);
+            string tempends = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TempTail);
+            var dutylocationpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, $"{model.Location}duty.xlsx");//生成班表文件路径
+            pathlist.Add(ps);
+            pathlist.Add(temphs);
+            pathlist.Add(tempends);
+            pathlist.Add(dutylocationpath);
+            string Msg = "";
+            if (Checkfile(pathlist, ref Msg))
             {
-                var header = System.IO.File.ReadAllLines(temph);
-                foreach (var item in header)
+                DataTable table = ExcelTools.ReadExcel(dutylocationpath, $"{model.Location}班表", true);
+                //业务逻辑
+                DutyInfo.Init(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location));
+                //读取模板头
+                if (System.IO.File.Exists(temphs))
+                {
+                    var header = System.IO.File.ReadAllLines(temphs);
+                    foreach (var item in header)
+                        datainfo.Add(item);
+                }
+                else throw new Exception();
+                //Content
+                var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, model.SelectTime);
+                foreach (var item in TodayDutyinfo)
                     datainfo.Add(item);
+                //读取模板尾
+                if (System.IO.File.Exists(tempends))
+                {
+                    var end = System.IO.File.ReadAllLines(tempends);
+                    foreach (var item in end)
+                        datainfo.Add(item);
+                }
+                else throw new Exception();
+                model.Infos = datainfo;
             }
-            else throw new Exception();
-            var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, model.SelectTime);
-            foreach (var item in TodayDutyinfo)
-                datainfo.Add(item);
-            if (System.IO.File.Exists(tempend))
+            else
             {
-                var end = System.IO.File.ReadAllLines(tempend);
-                foreach (var item in end)
-                    datainfo.Add(item);
+                //返回客户端状态码
+                model.Message = Msg;
+                return model;
+            } 
+            return model;
+            //返回结果
+
+        }
+        /// <summary>
+        /// 检查服务端是否存在对应的文件
+        /// </summary>
+        /// <param name="pathlist"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        private bool Checkfile(List<string> pathlist, ref string message)
+        {
+            bool temp = true;
+            foreach (var path in pathlist)
+            {
+                Console.WriteLine(path);
+                if (!System.IO.File.Exists(path))
+                {
+                    message += $"服务端还没有：{path}文件，请上传！\n";
+                    temp = false;
+                }
             }
-            else throw new Exception();
-            return datainfo;
+            return temp;
+        }
+        [Route("GetSiteInfo")]
+        [HttpGet]
+        public string[] GetSiteInfo()
+        {
+            var str = System.IO.File.ReadAllText(Path.Combine(ConfigCore.WebRootPath,ConfigCore.TempFilePath));
+            string[] siteinfo = JsonSerializer.Deserialize<string[]>(str);
+            return siteinfo;
         }
     }
 }
