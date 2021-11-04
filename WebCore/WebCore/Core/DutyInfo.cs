@@ -4,6 +4,7 @@ using System.IO;
 using System.Text.Json;
 using Microsoft.AspNetCore.Hosting;
 using System.Collections.Generic;
+using WebCore.Core.Config;
 
 namespace WebCore.Core
 {
@@ -23,7 +24,7 @@ namespace WebCore.Core
         {
             IO.CheckPath(folderpath, true);
             Read_Dutyinfo_Dict(folderpath);
-            Read_Linkinfo_Dict(folderpath);
+            Read_Linkinfo_Dict(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath));
             Read_Templatedict(folderpath);
         }
         public static void Read_Linkinfo_Dict(string rootpath)
