@@ -32,6 +32,9 @@
     <Folder Include="Core\Config\" />
     <Folder Include="Configs\" />
     <Folder Include="wwwroot\TempFile\DutyInfo\瑞鑫时代大厦\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Core\DutyInfos\" />
+    <Folder Include="Core\Tools\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +59,9 @@
     <None Remove="NPOI" />
     <None Remove="Core\Config\" />
     <None Remove="Configs\" />
+    <None Remove="Properties\PublishProfiles\" />
+    <None Remove="Core\DutyInfo\" />
+    <None Remove="Core\Tools\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

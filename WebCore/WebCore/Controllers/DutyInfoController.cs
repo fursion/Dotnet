@@ -16,7 +16,7 @@ using WebCore.Models;
 namespace WebCore.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class DutyInfoController : ControllerBase
     {
         private IWebHostEnvironment _he;
@@ -43,6 +43,8 @@ namespace WebCore.Controllers
             pathlist.Add(tempends);
             pathlist.Add(dutylocationpath);
             string Msg = "";
+            WebCore.Core.DutyInfos.DutyInfoComputeHander computeHander = new(model);
+            //return model;
             if (Checkfile(pathlist, ref Msg))
             {
                 DataTable table = ExcelTools.ReadExcel(dutylocationpath, $"{model.Location}班表", true);
@@ -91,7 +93,6 @@ namespace WebCore.Controllers
             bool temp = true;
             foreach (var path in pathlist)
             {
-                Console.WriteLine(path);
                 if (!System.IO.File.Exists(path))
                 {
                     message += $"服务端还没有：{path}文件，请上传！\n";
@@ -104,8 +105,8 @@ namespace WebCore.Controllers
         [HttpGet]
         public string[] GetSiteInfo()
         {
-            var str = System.IO.File.ReadAllText(Path.Combine(ConfigCore.WebRootPath,ConfigCore.TempFilePath));
-            string[] siteinfo = JsonSerializer.Deserialize<string[]>(str);
+            var str = System.IO.File.ReadAllText(Path.Combine(ConfigCore.TempFilePath, "DutyInfo/Sites.json"));
+            var siteinfo = JsonSerializer.Deserialize<string[]>(str);
             return siteinfo;
         }
     }

@@ -23,6 +23,14 @@ namespace WebCore.Core
 
 
         }
+        public static string ReadAllText(string path)
+        {
+            if (File.Exists(path))
+            {
+                return File.ReadAllText(path);
+            }
+            return "文件不存在";
+        }
         public static void PossingFile(HttpContext httpContext)
         {
             var f = httpContext.Request.Form.Files.FirstOrDefault();

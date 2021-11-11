@@ -1,13 +1,17 @@
 ﻿{
-  "roul1":{
-    "DutyCycle": 4,
-    "index": [
-      2
-    ],
-    "dutyinfo": "白",
-    "Location1": "15F",
-    "Location2": "40F",
-    "State": "休"
-  }
+  "LocationInOnly": true,
+  "Cycle": 4,
+  "LocationKeyDit": {
+    "2": "15F"
+  },
+  "Dispute": {
+    "白": {
+      "1": "40F",
+      "2": "15F"
+    }
+  },
+  "MaskItem": [
+    "白（初）",
+    "休"
+  ]
 }
-

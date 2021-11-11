@@ -83,6 +83,25 @@ namespace WebCore.Core.Config
             }
 
         }
+        public static T GetConfigItem<T>() where T : IConfig
+        {
+            try
+            {
+                string ConfigName = typeof(T).Name;
+                if (GetConfig.ContainsKey(ConfigName))
+                {
+                    return GetConfig[ConfigName] as T;
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                return null;
+            }
+
+        }
         /// <summary>
 		/// 刷新配置文件
 		/// </summary>

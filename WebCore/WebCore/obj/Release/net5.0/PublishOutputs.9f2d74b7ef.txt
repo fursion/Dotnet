@@ -11,6 +11,7 @@
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/file/TempHeader.txt
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/file/Template.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/file/TempTail.txt
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/file/~$IFSduty.xlsx
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/htmls/header.html
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/htmls/qr.html
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/js/index.full.js
@@ -27,6 +28,7 @@
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/IFS/TempHeader.txt
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/IFS/Template.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/IFS/TempTail.txt
+/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/linklist.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/Sites.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/DutyInfo.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/TempHeader.txt
@@ -34,8 +36,6 @@
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/Template.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/linklist.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/瑞鑫时代大厦duty.xlsx
-/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/package-lock.json
-/Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/wwwroot/TempFile/Photo Booth图库.zip
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/appsettings.Development.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/appsettings.json
 /Users/fursion/Dotnet/Dotnet/WebCore/WebCore/bin/Release/net5.0/publish/Configs/AuthConfig.json

@@ -5,8 +5,10 @@ using Microsoft.Extensions.Logging;
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using WebCore.Core;
 using WebCore.Core.Config;
 
 namespace WebCore
@@ -15,12 +17,13 @@ namespace WebCore
     {
         public static void Main(string[] args)
         {
+            //DutyHander hander = new();
+            //WebCore.Core.Tools.ExcelTools.test();
+            
             ConfigCore.AddConfig<AuthConfig>();
             ConfigCore.AddConfig<DutyConfig>();
             ConfigCore.ConfigInit().Wait();
-            Console.WriteLine(ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath);
             CreateHostBuilder(args).Build().Run();
-
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

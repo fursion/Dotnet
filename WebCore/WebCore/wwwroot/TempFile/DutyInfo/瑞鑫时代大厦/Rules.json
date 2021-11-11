@@ -1,8 +1,12 @@
 ﻿{
-  "LocationInOnly": true,
+  "LocationInOnly": false,
   "Cycle": 4,
-  "LocationKeyDit": {
-    "2": "15F",
-    "1": "40F"
-  }
+  "Dispute": {
+    "白": {
+    }
+  },
+  "MaskItem": [
+    "白（初）",
+    "休"
+  ]
 }
