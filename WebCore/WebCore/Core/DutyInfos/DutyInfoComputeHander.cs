@@ -225,7 +225,7 @@ namespace WebCore.Core.DutyInfos
                 List<string>[] lists = new List<string>[keyValueCount];
                 for (int i = 0; i < lists.Length; i++)
                     lists[i] = new List<string>();
-                for (int ruleindex = 0; ruleindex < list.Count; ruleindex++)
+                for (int ruleindex = 0; ruleindex < Values.Count; ruleindex++)
                 {
                     for (int index = 0; index < list.Count; index++)
                     {
