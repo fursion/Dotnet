@@ -28,58 +28,8 @@ namespace WebCore.Controllers
         [HttpPost]
         public PersonOnDutyInfoModel Getinfo(PersonOnDutyInfoModel model)
         {
-            List<string> datainfo = new List<string>();
-            //1.核对对应的配置文件是否齐全
-            //2.读对应的文件和班表。
-            //3.生成在班信息表
-            //4.回复客户端
-            var pathlist = new List<string>();
-            string ps = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TemplatePath);
-            string temphs = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TempHeader);
-            string tempends = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").TempTail);
-            var dutylocationpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location, $"{model.Location}duty.xlsx");//生成班表文件路径
-            pathlist.Add(ps);
-            pathlist.Add(temphs);
-            pathlist.Add(tempends);
-            pathlist.Add(dutylocationpath);
-            string Msg = "";
-            WebCore.Core.DutyInfos.DutyInfoComputeHander computeHander = new(model);
-            //return model;
-            if (Checkfile(pathlist, ref Msg))
-            {
-                DataTable table = ExcelTools.ReadExcel(dutylocationpath, $"{model.Location}班表", true);
-                //业务逻辑
-                DutyInfo.Init(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").SavePath, ConfigCore.GetConfigItem<DutyConfig>("DutyConfig").FolderPath, model.Location));
-                //读取模板头
-                if (System.IO.File.Exists(temphs))
-                {
-                    var header = System.IO.File.ReadAllLines(temphs);
-                    foreach (var item in header)
-                        datainfo.Add(item);
-                }
-                else throw new Exception();
-                //Content
-                var TodayDutyinfo = ExcelTools.Traversal_duty_Table(table, model.SelectTime);
-                foreach (var item in TodayDutyinfo)
-                    datainfo.Add(item);
-                //读取模板尾
-                if (System.IO.File.Exists(tempends))
-                {
-                    var end = System.IO.File.ReadAllLines(tempends);
-                    foreach (var item in end)
-                        datainfo.Add(item);
-                }
-                else throw new Exception();
-                model.Infos = datainfo;
-            }
-            else
-            {
-                //返回客户端状态码
-                model.Message = Msg;
-                return model;
-            } 
+            WebCore.Core.DutyInfos.DutyInfoComputeHander computeHander = new(ref model);
             return model;
-            //返回结果
 
         }
         /// <summary>

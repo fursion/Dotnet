@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Text.Json;
 using System.Threading;
 using System.Data;
@@ -11,30 +12,53 @@ using WebCore.Core.Config;
 
 namespace WebCore.Core.DutyInfos
 {
+    public static class DutyTool
+    {
+        /// <summary>
+        /// 姓名格式化
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public static string Nameformat(this string Name)
+        {
+            if (Name.Length == 2)
+            {
+                Name = Name[0] + "  " + Name[1];
+            }
+            return Name;
+        }
+    }
     public class DutyInfoComputeHander : IDisposable
     {
         public struct PersonInfo
         {
-            public bool IsTrue{get;set;}
+            public string Icon { get; set; }
+            public bool IsTrue { get; set; }
             public string Name { get; set; }
             public string Duty { get; set; }
             public string Location { get; set; }
             public string DutyTime { get; set; }
-            public PersonInfo(string name, string duty, string location, string dutytime)
+            public string Link { get; set; }
+            public PersonInfo(string icon, string name, string duty, string location, string dutytime, string link)
             {
-                this.IsTrue=true;
-                this.Name = name; this.Duty = duty; this.Location = location; this.DutyTime = dutytime;
+                this.IsTrue = true;
+                this.Icon = icon;
+                this.Name = name.Nameformat(); this.Duty = duty; this.Location = location; this.DutyTime = dutytime; this.Link = link;
             }
         }
+        private string PersonInfoTemplate;
         private DutyRule DutyRule { get; set; }
+        private Dictionary<string, string> PersonLinksDict { get; set; }
         private Dictionary<string, Dutyinfos> DutyinfosDict { get; set; }
-        public DutyInfoComputeHander(PersonOnDutyInfoModel model)
+        public DutyInfoComputeHander(ref PersonOnDutyInfoModel model)
         {
-            var rulefilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().SavePath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "Rules.json");//生成班表文件路径
-            var Dutyinfosfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().SavePath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "DutyInfo.json");
+            var rulefilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "Rules.json");//生成班表文件路径
+            var Dutyinfosfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "DutyInfo.json");
+            PersonInfoTemplate = IO.ReadAllText(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "TempInfo.txt"));
             DutyRule = getDutyRule(rulefilepath);
             DutyinfosDict = getDutyinfosDict(Dutyinfosfilepath);
-            ComputeDutyInfos(model);
+            model.Infos = new List<string>();
+            ComputeDutyInfos(ref model);
 
         }
         /// <summary>
@@ -72,9 +96,9 @@ namespace WebCore.Core.DutyInfos
                                     LastRestDay = i2;
                                     var index = rule.Cycle - (LastRestDay - time.Day) % rule.Cycle;
                                     if (rule.Dispute[todayDuty].ContainsKey(index))
-                                        return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{rule.Dispute[todayDuty][index]}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                                        return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{rule.Dispute[todayDuty][index]}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
                                     else
-                                        return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                                        return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
                                 }
                             }
                         }
@@ -86,19 +110,19 @@ namespace WebCore.Core.DutyInfos
                                 LastRestDay = i;
                                 var index = (time.Day - LastRestDay) % rule.Cycle;
                                 if (rule.Dispute[todayDuty].ContainsKey(index))
-                                    return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{rule.Dispute[todayDuty][index]}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                                    return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{rule.Dispute[todayDuty][index]}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
                                 else
-                                    return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                                    return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
                             }
                         }
                     }
-                    return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                    return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
                 }
                 else
-                    return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                    return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
             }
             else
-                return new PersonInfo($"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}");
+                return new PersonInfo($"{DutyinfosDict[DutyNameformat(todayDuty)].icon}", $"{table.Rows[PersonIndex][table.Columns[0]]}", $"{DutyNameformat($"{table.Rows[PersonIndex][table.Columns[time.Day]]}")}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Place}", $"{DutyinfosDict[DutyNameformat(todayDuty)].Timeslot}", ComputePersonLinks($"{table.Rows[PersonIndex][table.Columns[0]]}"));
         }
         /// <summary>
         /// 是否是争议项
@@ -120,7 +144,6 @@ namespace WebCore.Core.DutyInfos
             bool result = false;
             for (int itemcount = 0; itemcount < DutyRule.MaskItem.Length; itemcount++)
             {
-
                 result |= Item.Contains(DutyRule.MaskItem[itemcount]);
             }
             return result;
@@ -128,19 +151,28 @@ namespace WebCore.Core.DutyInfos
         /// <summary>
         /// 计算工作时间
         /// </summary>
-        private void ComputeWorkingHours()
+        private string TemplateCompose(string Temp, PersonInfo info)
         {
-
+            return string.Format(Temp, info.Icon, info.Duty, info.Location, info.DutyTime, info.Name, info.Link);
+        }
+        private string ComputePersonLinks(string PersonName)
+        {
+            if (DutyInfoService.GetService().ContactsLinksDict.ContainsKey(PersonName))
+            {
+                var link = DutyInfoService.GetService().ContactsLinksDict[PersonName];
+                return link;
+            }
+            return "not found person's link";
         }
         /// <summary>
         /// 计算在班人员信息
         /// </summary>
-        private void ComputeDutyInfos(PersonOnDutyInfoModel model)
+        private void ComputeDutyInfos(ref PersonOnDutyInfoModel model)
         {
-            var dutyfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().SavePath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, $"{model.Location}duty.xlsx");//生成班表文件路径
+            var dutyfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, $"{model.Location}duty.xlsx");//生成班表文件路径
 
             var tables = getDataTable(dutyfilepath);
-            AnalysisDutyDatatable(TimeEffective(model.SelectTime), tables[0]);
+            AnalysisDutyDatatable(TimeEffective(model.SelectTime), tables[0], ref model);
 
         }
         /// <summary>
@@ -148,7 +180,7 @@ namespace WebCore.Core.DutyInfos
         /// </summary>
         /// <param name="time"></param>
         /// <param name="table"></param>
-        private void AnalysisDutyDatatable(DateTime time, DataTable table)
+        private void AnalysisDutyDatatable(DateTime time, DataTable table, ref PersonOnDutyInfoModel model)
         {
             int day = time.Day;
             int NowMouthDays = Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(time.Year, time.Month);
@@ -157,19 +189,86 @@ namespace WebCore.Core.DutyInfos
             string TimeLocation = table.Rows[0][table.Columns[0]].ToString();
             if (TimeLocation.Contains(time.Year.ToString()) && TimeLocation.Contains(time.Month.ToString()))//判断表是否为当前月
             {
+                List<string> infos = new List<string>();
                 for (int i = ContactsIndex; i < table.Rows.Count; i++)
                 {
                     var info = ComputeLocation(table, DutyRule, time, i);
                     if (info.IsTrue)
-                        System.Console.WriteLine($"{info.Name} {info.Duty} {info.Location} {info.DutyTime}");
+                    {
+                        infos.Add(TemplateCompose(PersonInfoTemplate, info));
+                    }
                 }
+                PersonSort(ref infos);
+                ComputeInfos(infos, ref model);
             }
-            Console.WriteLine(table.Rows[0][table.Columns[0]]);
         }
-
-        private void ComputePersonDutyInfos()
+        private void PersonSort(ref List<string> infos)
         {
+            if (DutyRule.SortRules == null)
+                return;
+            var sortRulesCount = DutyRule.SortRules.Keys.Count;
+            string[] keys = new string[sortRulesCount];
+            int key_index = 0;
+            DutyRule.SortRules.Keys.CopyTo(keys, key_index);
+            Sort(DutyRule.SortRules, ref key_index, keys, ref infos);
+            //var method = this.GetType().GetMethod($"Sort{keys[key_index]}");
+            //method.Invoke(this, new object[] { model, DutyRule.SortRules[keys[key_index]], key_index });
+        }
+        private void Sort(Dictionary<string, List<string>> ruledict, ref int dict_index, string[] dict_keys, ref List<string> Infos)
+        {
+            var max = ruledict.Keys.Count;
+            if (ruledict.ContainsKey(dict_keys[dict_index]))
+            {
+                var list = Infos;
+                var keyValueCount = ruledict[dict_keys[dict_index]].Count;
+                var Values = ruledict[dict_keys[dict_index]];
+                List<string>[] lists = new List<string>[keyValueCount];
+                for (int i = 0; i < lists.Length; i++)
+                    lists[i] = new List<string>();
+                for (int ruleindex = 0; ruleindex < list.Count; ruleindex++)
+                {
+                    for (int index = 0; index < list.Count; index++)
+                    {
+                        if (list[index].Contains(Values[ruleindex]))
+                            lists[ruleindex].Add(list[index]);
+                    }
+                    if (dict_index < max - 1)
+                    {
+                        dict_index++;
+                        Sort(ruledict, ref dict_index, dict_keys, ref lists[ruleindex]);
+                    }
+                }
+                List<string> rlist = new();
+                foreach (var Sublist in lists)
+                {
+                    foreach (var item in Sublist)
+                    {
+                        rlist.Add(item);
+                    }
+                }
+                Infos = rlist;
+            }
+            else if (dict_index < max - 1)
+            {
+                dict_index++;
+                Sort(ruledict, ref dict_index, dict_keys, ref Infos);
+            }
+        }
+        private void ComputeInfos(List<string> infoBody, ref PersonOnDutyInfoModel model)
+        {
+            string headerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>().TempHeader);
+            string footerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>().TempTail);
 
+            string[] header = IO.ReadAllLines(headerpath);
+            string[] footer = IO.ReadAllLines(footerpath);
+            List<string> infos = new();
+            foreach (var item in header)
+                infos.Add(item);
+            foreach (var item in infoBody)
+                infos.Add(item);
+            foreach (var item in footer)
+                infos.Add(item);
+            model.Infos = infos;
         }
         /// <summary>
         /// 获取对应规则实例

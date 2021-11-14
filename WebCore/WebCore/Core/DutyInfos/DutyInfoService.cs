@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
 using WebCore.Core;
@@ -7,16 +8,17 @@ namespace WebCore.Core.DutyInfos
 {
     public class DutyInfoService : WebService<DutyInfoService>, IWebService
     {
-        public Dictionary<string, string> ContactsDict;
+        public Dictionary<string, string> ContactsLinksDict;
         public DutyInfoService()
         {
             ConfigCore.AddConfig<DutyConfig>();
+            Refresh();
         }
         public void Refresh()
         {
             try
             {               
-                ContactsDict = JsonSerializer.Deserialize<Dictionary<string, string>>(IO.ReadAllText( ConfigCore.GetConfigItem<DutyConfig>().ContactLinkPath));
+                ContactsLinksDict = JsonSerializer.Deserialize<Dictionary<string, string>>(IO.ReadAllText(Path.Combine(ConfigCore.WebRootPath,ConfigCore.GetConfigItem<DutyConfig>().ContactLinkPath)));
             }
             catch (Exception e) { Console.WriteLine(e.Message); }
         }

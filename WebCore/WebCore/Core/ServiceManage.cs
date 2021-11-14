@@ -22,7 +22,7 @@ namespace WebCore.Core
         {
             Console.WriteLine($"{typeof(ServiceManage).Name} 启动");
         }
-        public static void RegisterService<T>()where T:WebService<T>,IWebService
+        public static void RegisterService<T>()where T:WebService<T>,IWebService,new()
         {
             /*注册新的Service,返回Serviceid,
              * 写入Service记录库 

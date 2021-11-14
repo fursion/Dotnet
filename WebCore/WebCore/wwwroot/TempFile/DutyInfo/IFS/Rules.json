@@ -1,9 +1,6 @@
 ﻿{
   "LocationInOnly": true,
   "Cycle": 4,
-  "LocationKeyDit": {
-    "2": "15F"
-  },
   "Dispute": {
     "白": {
       "1": "40F",
@@ -13,5 +10,17 @@
   "MaskItem": [
     "白（初）",
     "休"
-  ]
+  ],
+  "SortRules": {
+    "Shift": [
+      "白班",
+      "中班",
+      "晚班",
+      "夜班"
+    ],
+    "Location": [
+      "15F",
+      "40F"
+    ]
+  }
 }

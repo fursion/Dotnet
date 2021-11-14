@@ -31,6 +31,11 @@ namespace WebCore.Core
             duty.LocationKeyDit.Add(1, "40F");
             duty.Dispute = new Dictionary<string, Dictionary<int, string>>();
             duty.Dispute.Add("白", duty.LocationKeyDit);
+            duty.SortRules=new Dictionary<string, List<string>>();
+            List<string> locationlist=new List<string>();
+            locationlist.Add("15F");
+            locationlist.Add("40F");
+            duty.SortRules.Add("Location",locationlist);
             string var = JsonSerializer.Serialize<DutyRule>(duty);
             Console.WriteLine(var);
             var ob = JsonSerializer.Deserialize<DutyRule>(var);
@@ -43,6 +48,7 @@ namespace WebCore.Core
         public Dictionary<int, string> LocationKeyDit { get; set; }
         public Dictionary<string, Dictionary<int, string>> Dispute { get; set; }
         public string[] MaskItem { get; set; }
+        public Dictionary<string,List<string>> SortRules{get;set;}
         public Tuple<int,string,string> tup { get; set;}
     }
     public class DisputeHander

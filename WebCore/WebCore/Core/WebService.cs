@@ -1,7 +1,7 @@
 ﻿using System;
 namespace WebCore.Core
 {
-    public interface IWebService:IDisposable
+    public interface IWebService : IDisposable
     {
         /// <summary>
         /// 启动服务
@@ -16,9 +16,15 @@ namespace WebCore.Core
         /// </summary>
         protected void ReStartService();
     }
-    public abstract class WebService<T>where T:IWebService
+    public abstract class WebService<T> where T : IWebService, new()
     {
-        public static T Service { get; set; }
+        private static T Service { get; set; }
+        public static T GetService()
+        {
+            if (null != Service)
+                return Service;
+            return Service = new T();
+        }
     }
 }
 
