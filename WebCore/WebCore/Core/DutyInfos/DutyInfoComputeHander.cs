@@ -303,7 +303,7 @@ namespace WebCore.Core.DutyInfos
         /// <returns></returns>
         private DateTime TimeEffective(DateTime Inputtime)
         {
-            if (Inputtime == DateTime.MinValue || Inputtime.Year != DateTime.Now.Year || Inputtime.Month != DateTime.Now.Month)
+            if (Inputtime == DateTime.MinValue || Inputtime.Year != DateTime.Now.Year)
                 return DateTime.Now;
             return Inputtime;
         }
