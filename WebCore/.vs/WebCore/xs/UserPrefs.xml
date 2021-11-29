@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{C4CA8AFD-0BEC-447E-82E5-FA4137C1D6E1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/Rules.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebCore/Program.cs">
     <Files>
       <File FileName="WebCore/WebCore.csproj" Line="4" Column="46" />
       <File FileName="WebCore/Core/Authorization/AuthController.cs" Line="12" Column="20" />
-      <File FileName="WebCore/Program.cs" Line="19" Column="10" />
-      <File FileName="WebCore/Controllers/DutyInfoController.cs" Line="95" Column="14" />
+      <File FileName="WebCore/Program.cs" Line="24" Column="48" />
+      <File FileName="WebCore/Controllers/DutyInfoController.cs" Line="45" Column="14" />
       <File FileName="WebCore/Core/Config/DutyConfig.cs" Line="10" Column="43" />
       <File FileName="WebCore/Configs/DutyConfig.json" Line="8" Column="29" />
       <File FileName="WebCore/wwwroot/file/DutyInfo.json" Line="1" Column="1" />
       <File FileName="WebCore/Core/Config/AuthConfig.cs" Line="1" Column="1" />
       <File FileName="WebCore/Core/Config/ConfigCore.cs" Line="93" Column="55" />
-      <File FileName="WebCore/Core/DutyInfos/DutyRule.cs" Line="44" Column="67" />
-      <File FileName="WebCore/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/Rules.json" Line="7" Column="4" />
+      <File FileName="WebCore/Core/DutyInfos/DutyRule.cs" Line="49" Column="67" />
+      <File FileName="WebCore/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/Rules.json" Line="20" Column="2" />
       <File FileName="WebCore/wwwroot/TempFile/DutyInfo/IFS/DutyInfo.json" Line="22" Column="8" />
-      <File FileName="WebCore/Core/DutyInfos/DutyInfoComputeHander.cs" Line="102" Column="1" />
-      <File FileName="WebCore/Core/DutyInfos/DutyInfoService.cs" Line="13" Column="48" />
+      <File FileName="WebCore/Core/DutyInfos/DutyInfoComputeHander.cs" Line="111" Column="1" />
+      <File FileName="WebCore/Core/DutyInfos/DutyInfoService.cs" Line="14" Column="48" />
       <File FileName="WebCore/Core/WebService.cs" Line="17" Column="41" />
       <File FileName="WebCore/Core/ServiceManage.cs" Line="30" Column="16" />
       <File FileName="WebCore/Core/SQL/IO.cs" Line="22" Column="10" />
@@ -22,7 +22,7 @@
       <File FileName="WebCore/Models/Request.cs" Line="1" Column="1" />
       <File FileName="WebCore/Startup.cs" Line="55" Column="54" />
       <File FileName="WebCore/Core/Tools/ExcelTools.cs" Line="16" Column="1" />
-      <File FileName="WebCore/wwwroot/TempFile/DutyInfo/IFS/Rules.json" Line="7" Column="15" />
+      <File FileName="WebCore/wwwroot/TempFile/DutyInfo/IFS/Rules.json" Line="4" Column="15" />
       <File FileName="WebCore/Core/DutyInfos/DutyInfo.cs" Line="52" Column="14" />
       <File FileName="WebCore/Core/DutyInfos/ProcessExcel.cs" Line="132" Column="7" />
       <File FileName="WebCore/wwwroot/TempFile/DutyInfo/瑞鑫时代大厦/linklist.json" Line="1" Column="1" />

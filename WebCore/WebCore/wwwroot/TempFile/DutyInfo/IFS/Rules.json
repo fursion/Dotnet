@@ -1,5 +1,5 @@
 ﻿{
-  "LocationInOnly": true,
+  "LocationInOnly": false,
   "Cycle": 4,
   "Dispute": {
     "白": {
@@ -13,7 +13,7 @@
   ],
   "SortRules": {
     "Shift": [
-      "白班",
+      "早班",
       "中班",
       "晚班",
       "夜班"
