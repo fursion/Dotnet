@@ -77,7 +77,7 @@ namespace WebCore.Core.DutyInfos
             int NowMouthDays = Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(time.Year, time.Month);
             int LastRestDay;
             string todayDuty = table.Rows[PersonIndex][table.Columns[time.Day]].ToString();
-            if (DoMaskItem(todayDuty))
+            if (DoMaskItem(todayDuty)|todayDuty=="")
                 return new PersonInfo();
             if (rule == null || rule.LocationInOnly)
             {
@@ -314,6 +314,8 @@ namespace WebCore.Core.DutyInfos
         /// <returns></returns>
         private static string DutyNameformat(string duty)
         {
+            if (duty == "")
+                return null;
             duty = duty.Substring(0, 1);
             return duty + "班";
         }
