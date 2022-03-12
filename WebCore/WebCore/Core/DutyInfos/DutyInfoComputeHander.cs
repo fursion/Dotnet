@@ -50,17 +50,63 @@ namespace WebCore.Core.DutyInfos
         private DutyRule DutyRule { get; set; }
         private Dictionary<string, string> PersonLinksDict { get; set; }
         private Dictionary<string, Dutyinfos> DutyinfosDict { get; set; }
-        public DutyInfoComputeHander(ref PersonOnDutyInfoModel model)
+        public DutyInfoComputeHander(ref PersonOnDutyInfoModel model, int index = 0)
         {
-            var rulefilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "Rules.json");//生成班表文件路径
-            var Dutyinfosfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "DutyInfo.json");
-            PersonInfoTemplate = IO.ReadAllText(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, "TempInfo.txt"));
+            Compute(ref model,index);
+            /*
+            var rulefilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "Rules.json");//生成班表文件路径
+            var Dutyinfosfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "DutyInfo.json");
+            PersonInfoTemplate = IO.ReadAllText(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "TempInfo.txt"));
             DutyRule = getDutyRule(rulefilepath);
             DutyinfosDict = getDutyinfosDict(Dutyinfosfilepath);
             model.Infos = new List<string>();
-            ComputeDutyInfos(ref model);
-
+            var Values = ComputeDutyInfos(ref model);
+            */
+            
         }
+        #region  测试算法
+        public void Compute(ref PersonOnDutyInfoModel model, int factor = 0)
+        {
+            //
+            List<ValueTuple<string, List<string>>> locainfos = new();
+            for (int i = 0; i < factor; i++)
+            {
+                var Values = Computehander(ref model, i);
+                locainfos.Add(Values);
+            }
+            string headerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[0], ConfigCore.GetConfigItem<DutyConfig>().TempHeader);
+            string footerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[0], ConfigCore.GetConfigItem<DutyConfig>().TempTail);
+
+            string[] header = IO.ReadAllLines(headerpath);
+            string[] footer = IO.ReadAllLines(footerpath);
+            List<string> infos = new();
+            foreach (var item in header)
+                infos.Add(item);
+            foreach (var item in locainfos)
+            {
+                infos.Add("---");
+                infos.Add(item.Item1);
+                infos.Add("---");
+                foreach(var info in item.Item2){
+                    infos.Add(info);
+                }
+            }
+            foreach (var item in footer)
+                infos.Add(item);
+            model.Infos = infos;
+            //
+        }
+        public ValueTuple<string, List<string>> Computehander(ref PersonOnDutyInfoModel model, int index)
+        {
+            var rulefilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "Rules.json");//生成班表文件路径
+            var Dutyinfosfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "DutyInfo.json");
+            PersonInfoTemplate = IO.ReadAllText(Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], "TempInfo.txt"));
+            DutyRule = getDutyRule(rulefilepath);
+            DutyinfosDict = getDutyinfosDict(Dutyinfosfilepath);
+            model.Infos = new List<string>();
+            return ComputeDutyInfos(ref model, index);
+        }
+        #endregion
         /// <summary>
         /// 获取数据表
         /// </summary>
@@ -70,14 +116,14 @@ namespace WebCore.Core.DutyInfos
             return tables;
         }
         /// <summary>
-        /// 计算
+        /// 计算位置
         /// </summary>
         public PersonInfo ComputeLocation(DataTable table, DutyRule rule, DateTime time, int PersonIndex)
         {
             int NowMouthDays = Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(time.Year, time.Month);
             int LastRestDay;
             string todayDuty = table.Rows[PersonIndex][table.Columns[time.Day]].ToString();
-            if (DoMaskItem(todayDuty)|todayDuty=="")
+            if (DoMaskItem(todayDuty) | todayDuty == "")
                 return new PersonInfo();
             if (rule == null || rule.LocationInOnly)
             {
@@ -167,12 +213,12 @@ namespace WebCore.Core.DutyInfos
         /// <summary>
         /// 计算在班人员信息
         /// </summary>
-        private void ComputeDutyInfos(ref PersonOnDutyInfoModel model)
+        private ValueTuple<string, List<string>> ComputeDutyInfos(ref PersonOnDutyInfoModel model, int index = 0)
         {
-            var dutyfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, $"{model.Location}duty.xlsx");//生成班表文件路径
+            var dutyfilepath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], $"{model.Location[index]}duty.xlsx");//生成班表文件路径
 
             var tables = getDataTable(dutyfilepath);
-            AnalysisDutyDatatable(TimeEffective(model.SelectTime), tables[0], ref model);
+            return AnalysisDutyDatatable(TimeEffective(model.SelectTime), tables[0], ref model,index);
 
         }
         /// <summary>
@@ -180,7 +226,7 @@ namespace WebCore.Core.DutyInfos
         /// </summary>
         /// <param name="time"></param>
         /// <param name="table"></param>
-        private void AnalysisDutyDatatable(DateTime time, DataTable table, ref PersonOnDutyInfoModel model)
+        private ValueTuple<string, List<string>> AnalysisDutyDatatable(DateTime time, DataTable table, ref PersonOnDutyInfoModel model, int index = 0)
         {
             int day = time.Day;
             int NowMouthDays = Thread.CurrentThread.CurrentUICulture.Calendar.GetDaysInMonth(time.Year, time.Month);
@@ -199,8 +245,11 @@ namespace WebCore.Core.DutyInfos
                     }
                 }
                 PersonSort(ref infos);
-                ComputeInfos(infos, ref model);
+                ValueTuple<string, List<string>> Values = new(model.Location[index], infos);
+                return Values;
+                //ComputeInfos(infos, ref model);
             }
+            return new(null, null);
         }
         private void PersonSort(ref List<string> infos)
         {
@@ -214,6 +263,13 @@ namespace WebCore.Core.DutyInfos
             //var method = this.GetType().GetMethod($"Sort{keys[key_index]}");
             //method.Invoke(this, new object[] { model, DutyRule.SortRules[keys[key_index]], key_index });
         }
+        /// <summary>
+        /// 递归执行排序规则
+        /// </summary>
+        /// <param name="ruledict"></param>
+        /// <param name="dict_index"></param>
+        /// <param name="dict_keys"></param>
+        /// <param name="Infos"></param>
         private void Sort(Dictionary<string, List<string>> ruledict, ref int dict_index, string[] dict_keys, ref List<string> Infos)
         {
             var max = ruledict.Keys.Count;
@@ -254,10 +310,15 @@ namespace WebCore.Core.DutyInfos
                 Sort(ruledict, ref dict_index, dict_keys, ref Infos);
             }
         }
-        private void ComputeInfos(List<string> infoBody, ref PersonOnDutyInfoModel model)
+        /// <summary>
+        /// 文本汇总根据模板生成最终信息
+        /// </summary>
+        /// <param name="infoBody"></param>
+        /// <param name="model"></param>
+        private void ComputeInfos(List<string> infoBody, ref PersonOnDutyInfoModel model, int index = 0)
         {
-            string headerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>().TempHeader);
-            string footerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location, ConfigCore.GetConfigItem<DutyConfig>().TempTail);
+            string headerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], ConfigCore.GetConfigItem<DutyConfig>().TempHeader);
+            string footerpath = Path.Combine(ConfigCore.WebRootPath, ConfigCore.GetConfigItem<DutyConfig>().FolderPath, model.Location[index], ConfigCore.GetConfigItem<DutyConfig>().TempTail);
 
             string[] header = IO.ReadAllLines(headerpath);
             string[] footer = IO.ReadAllLines(footerpath);

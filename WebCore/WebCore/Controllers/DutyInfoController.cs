@@ -28,7 +28,7 @@ namespace WebCore.Controllers
         [HttpPost]
         public PersonOnDutyInfoModel Getinfo(PersonOnDutyInfoModel model)
         {
-            WebCore.Core.DutyInfos.DutyInfoComputeHander computeHander = new(ref model);
+            WebCore.Core.DutyInfos.DutyInfoComputeHander computeHander = new(ref model,model.Location.Length);
             return model;
 
         }
